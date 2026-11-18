@@ -74,3 +74,24 @@ Because a good teacher teaches, but a great teacher inspires!"
 6. International Relations: <img width="980" height="500" alt="image" src="https://github.com/user-attachments/assets/0a0833a6-dd94-4025-b670-dd7a01fe7db3" />
 
 
+Student Comittee Members: 
+1. President- Pratik Poojary <img width="427" height="557" alt="image" src="https://github.com/user-attachments/assets/1ed12c39-435f-4921-98ef-cbdccafb50b2" />
+2. Vice President- Alfiya Nakhwa <img width="460" height="587" alt="image" src="https://github.com/user-attachments/assets/edac8617-b5d6-4dfe-a27e-4d061f59ff7c" />
+3. General Secretaty- Heet Joshi <img width="491" height="632" alt="image" src="https://github.com/user-attachments/assets/194c4a24-cbb3-4213-b25e-d022008e4c09" />
+4. Technical Head- Soham Kasare <img width="442" height="552" alt="image" src="https://github.com/user-attachments/assets/4f22604b-2993-48ef-82aa-983dcc68cb3d" />
+5. Cultural head- Abbas Hussain <img width="461" height="583" alt="image" src="https://github.com/user-attachments/assets/2e38a076-1581-4f24-b35a-13b9211208a3" />
+6. Social Media Head- Nakul Dubey <img width="428" height="547" alt="image" src="https://github.com/user-attachments/assets/ddb3bcae-bbba-4df9-a126-376c3505f161" />
+7. Student manager- Zoha Khan <img width="455" height="567" alt="image" src="https://github.com/user-attachments/assets/1635bd39-4161-47c2-a5a1-d4fd3ee860b5" />
+8. NSS Head- Rajesh Rastogi <img width="467" height="548" alt="image" src="https://github.com/user-attachments/assets/44302e32-dfc1-4560-9baa-b40c3eff5b45" />
+Events:
+1. Garba: <img width="492" height="363" alt="image" src="https://github.com/user-attachments/assets/580905c5-0c11-4534-b775-5441bbce68ab" />
+2. Independence Day: <img width="818" height="432" alt="image" src="https://github.com/user-attachments/assets/782fde94-b775-4437-a800-93854e80d0ca" />
+
+NSS Comittee Members:
+1. NSS Head- Rajesh Rastogi <img width="251" height="207" alt="image" src="https://github.com/user-attachments/assets/ddf8a04d-ca55-44e2-b8bd-78fdfa57f070" />
+
+NSS Events: 
+1. Blood Donation Camp at Mira Road Station: <img width="806" height="407" alt="image" src="https://github.com/user-attachments/assets/d128a6e9-a24c-46d5-828c-07be6ffe4ace" />
+2. nasha Mukti Abhiyan (Stop Drugs Campaign): <img width="827" height="371" alt="image" src="https://github.com/user-attachments/assets/06122bcb-911a-4163-a6d7-9f6ce63da114" />
+3. National Yoga Day: <img width="292" height="182" alt="image" src="https://github.com/user-attachments/assets/694ca257-5984-4643-9a76-01b0b40bc3e5" />
+4. NSS Camp: <img width="601" height="295" alt="image" src="https://github.com/user-attachments/assets/0fb74d33-d287-4fb8-a370-73624f5a64b8" />
