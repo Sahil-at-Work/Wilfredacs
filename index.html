@@ -140,11 +140,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <div class="flex items-center space-x-4">
                 <!-- Crest Logo -->
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-navy-900 flex items-center justify-center text-white border-2 border-gold-400 shadow-md shrink-0 cursor-pointer" onclick="switchView('home')">
-                    <div class="text-center leading-none">
-                        <i class="fa-solid fa-graduation-cap text-xl sm:text-2xl text-gold-400 block mb-0.5"></i>
-                        <span class="text-[9px] font-extrabold tracking-widest block uppercase text-white">SWC</span>
-                    </div>
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center border-2 border-gold-400 shadow-md shrink-0 cursor-pointer overflow-hidden p-1" onclick="switchView('home')">
+                    <img src="https://github.com/user-attachments/assets/0e9b3715-628e-43ab-9189-657c019f2e47" 
+                         alt="St. Wilfred's College Logo" 
+                         onerror="this.src='https://placehold.co/120x120/062356/fbbf24?text=SWC'"
+                         class="w-full h-full object-contain rounded-full">
                 </div>
                 <div>
                     <h1 class="text-lg sm:text-2xl lg:text-3xl font-extrabold text-navy-900 tracking-tight leading-tight font-serif cursor-pointer" onclick="switchView('home')">
@@ -172,67 +172,71 @@
     <!-- ==================== 2. ROYAL NAVY NAVIGATION BAR ==================== -->
     <nav class="bg-navy-900 text-white shadow-md sticky top-[33px] z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-13">
+            <div class="flex items-center justify-between h-12 gap-2">
                 <!-- Desktop Navigation Menu -->
-                <div class="hidden lg:flex items-center space-x-1 text-xs font-semibold uppercase tracking-wider">
-                    <button onclick="switchView('home')" class="px-3 py-3 text-gold-400 font-bold hover:text-gold-300 transition">Home</button>
+                <div class="hidden lg:flex items-center space-x-0.5 xl:space-x-1 text-[11px] xl:text-xs font-semibold uppercase tracking-wide whitespace-nowrap">
+                    <button onclick="switchView('home')" class="px-2 xl:px-2.5 py-3 text-gold-400 font-bold hover:text-gold-300 transition whitespace-nowrap">Home</button>
                     
                     <!-- Dropdown: About Us -->
                     <div class="relative group">
-                        <button class="px-3 py-3 flex items-center gap-1 hover:text-gold-400 transition">
+                        <button class="px-2 xl:px-2.5 py-3 flex items-center gap-1 hover:text-gold-400 transition whitespace-nowrap">
                             About Us <i class="fa-solid fa-chevron-down text-[10px]"></i>
                         </button>
-                        <div class="absolute left-0 top-full w-60 bg-white text-slate-800 rounded-b-lg shadow-xl py-2 hidden group-hover:block border-t-2 border-gold-400 z-50">
-                            <button onclick="showAboutSection('vision')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Vision & Mission</button>
-                            <button onclick="showAboutSection('chairman')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Chairman's Message</button>
-                            <button onclick="showAboutSection('secretary')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Secretary's Message</button>
-                            <button onclick="showAboutSection('director')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Director's Message</button>
+                        <div class="absolute left-0 top-full w-60 bg-white text-slate-800 rounded-b-lg shadow-xl py-2 hidden group-hover:flex flex-col border-t-2 border-gold-400 z-50 whitespace-normal">
+                            <button onclick="showAboutSection('vision')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Vision & Mission</button>
+                            <button onclick="showAboutSection('chairman')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Chairman's Message</button>
+                            <button onclick="showAboutSection('secretary')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Secretary's Message</button>
+                            <button onclick="showAboutSection('director')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Director's Message</button>
                         </div>
                     </div>
 
                     <!-- Dropdown: Courses (All 8 Programs) -->
                     <div class="relative group">
-                        <button class="px-3 py-3 flex items-center gap-1 hover:text-gold-400 transition">
+                        <button class="px-2 xl:px-2.5 py-3 flex items-center gap-1 hover:text-gold-400 transition whitespace-nowrap">
                             Courses <i class="fa-solid fa-chevron-down text-[10px]"></i>
                         </button>
-                        <div class="absolute left-0 top-full w-72 bg-white text-slate-800 rounded-b-lg shadow-xl py-2 hidden group-hover:block border-t-2 border-gold-400 z-50 text-xs">
-                            <button onclick="openCourseView('ba')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">1. Bachelor of Arts (B.A.)</button>
-                            <button onclick="openCourseView('bcom')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">2. Bachelor of Commerce (B.Com)</button>
-                            <button onclick="openCourseView('bsc-micro')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">3. B.Sc. (Micro - Zoo - Chem)</button>
-                            <button onclick="openCourseView('bms')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">4. Bachelor of Management Studies (BMS)</button>
-                            <button onclick="openCourseView('bscit')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">5. B.Sc. Information Technology (B.Sc. IT)</button>
-                            <button onclick="openCourseView('bsccs')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">6. B.Sc. Computer Science (B.Sc. CS)</button>
-                            <button onclick="openCourseView('bscds')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">7. B.Sc. Data Science</button>
-                            <button onclick="openCourseView('bammc')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">8. B.A. Multimedia & Mass Comm (BAMMC)</button>
+                        <div class="absolute left-0 top-full w-72 bg-white text-slate-800 rounded-b-lg shadow-xl py-2 hidden group-hover:flex flex-col border-t-2 border-gold-400 z-50 text-xs whitespace-normal">
+                            <button onclick="openCourseView('ba')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">1. Bachelor of Arts (B.A.)</button>
+                            <button onclick="openCourseView('bcom')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">2. Bachelor of Commerce (B.Com)</button>
+                            <button onclick="openCourseView('bsc-micro')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">3. B.Sc. (Micro - Zoo - Chem)</button>
+                            <button onclick="openCourseView('bms')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">4. Bachelor of Management Studies (BMS)</button>
+                            <button onclick="openCourseView('bscit')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">5. B.Sc. Information Technology (B.Sc. IT)</button>
+                            <button onclick="openCourseView('bsccs')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">6. B.Sc. Computer Science (B.Sc. CS)</button>
+                            <button onclick="openCourseView('bscds')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">7. B.Sc. Data Science</button>
+                            <button onclick="openCourseView('bammc')" class="block w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900 font-medium">8. B.A. Multimedia & Mass Comm (BAMMC)</button>
                         </div>
                     </div>
 
-                    <button onclick="openStudentCornerModal('council')" class="px-3 py-3 hover:text-gold-400 transition">Student Corner</button>
-                    <button onclick="showLeadershipOverview()" class="px-3 py-3 hover:text-gold-400 transition">Faculty Experts</button>
-                    <button onclick="showProgramPeoPoModal()" class="px-3 py-3 hover:text-gold-400 transition text-gold-300 font-bold">Program (PEOs & POs)</button>
-                    <button onclick="showSection('notices')" class="px-3 py-3 hover:text-gold-400 transition">Notice</button>
+                    <button onclick="openStudentCornerModal('council')" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition whitespace-nowrap">Student Corner</button>
+                    <button onclick="showSection('events-section')" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition whitespace-nowrap">Events</button>
+                    <button onclick="showLeadershipOverview()" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition whitespace-nowrap">Faculty Experts</button>
+                    <button onclick="showProgramPeoPoModal()" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition text-gold-300 font-bold whitespace-nowrap">Program (PEOs & POs)</button>
+                    <button onclick="showSection('events-section')" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition whitespace-nowrap">Notice</button>
                     
                     <!-- Dropdown: Cell -->
                     <div class="relative group">
-                        <button class="px-3 py-3 flex items-center gap-1 hover:text-gold-400 transition">
+                        <button class="px-2 xl:px-2.5 py-3 flex items-center gap-1 hover:text-gold-400 transition whitespace-nowrap">
                             Cell <i class="fa-solid fa-chevron-down text-[10px]"></i>
                         </button>
-                        <div class="absolute left-0 top-full w-48 bg-white text-slate-800 rounded-b-lg shadow-xl py-2 hidden group-hover:block border-t-2 border-gold-400 z-50">
-                            <button onclick="openCellView('nss')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">NSS Cell</button>
-                            <button onclick="openCellView('cultural')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Cultural Committee</button>
-                            <button onclick="openCellView('sports')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Sports Cell</button>
-                            <button onclick="openCellView('research')" class="w-full text-left px-4 py-2 hover:bg-slate-100 hover:text-navy-900">Research & Innovation</button>
+                        <div class="absolute left-0 top-full w-56 bg-white text-slate-800 rounded-b-lg shadow-xl py-2 hidden group-hover:flex flex-col border-t-2 border-gold-400 z-50 whitespace-normal">
+                            <button onclick="openCellView('iqac')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900 font-semibold">IQAC Cell</button>
+                            <button onclick="openCellView('placement')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900 font-semibold">Placement Cell</button>
+                            <button onclick="openCellView('examination')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900 font-semibold border-b border-slate-100">Examination Cell</button>
+                            <button onclick="openCellView('nss')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900">NSS Cell</button>
+                            <button onclick="openCellView('cultural')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900">Cultural Committee</button>
+                            <button onclick="openCellView('sports')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900">Sports Cell</button>
+                            <button onclick="openCellView('research')" class="block w-full text-left px-4 py-2.5 hover:bg-slate-100 hover:text-navy-900">Research & Innovation</button>
                         </div>
                     </div>
 
-                    <button onclick="openModal('disclosuresModal')" class="px-3 py-3 hover:text-gold-400 transition text-left">Mandatory Disclosures</button>
-                    <button onclick="openModal('aicteModal')" class="px-3 py-3 hover:text-gold-400 transition text-left">AICTE</button>
-                    <button onclick="showSection('notices')" class="px-3 py-3 hover:text-gold-400 transition">Blog</button>
+                    <button onclick="openModal('disclosuresModal')" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition text-left whitespace-nowrap">Mandatory Disclosures</button>
+                    <button onclick="openModal('aicteModal')" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition text-left whitespace-nowrap">AICTE</button>
+                    <button onclick="showSection('events-section')" class="px-2 xl:px-2.5 py-3 hover:text-gold-400 transition whitespace-nowrap">Blog</button>
                 </div>
 
                 <!-- CTA Button -->
-                <div class="hidden sm:flex items-center">
-                    <button onclick="openModal('admissionModal')" class="bg-gradient-to-r from-gold-500 to-amber-500 hover:from-gold-400 hover:to-amber-400 text-navy-950 font-extrabold px-4 py-1.5 rounded shadow transition flex items-center gap-1.5 text-xs">
+                <div class="hidden sm:flex items-center shrink-0">
+                    <button onclick="openModal('admissionModal')" class="bg-gradient-to-r from-gold-500 to-amber-500 hover:from-gold-400 hover:to-amber-400 text-navy-950 font-extrabold px-3.5 py-1.5 rounded shadow transition flex items-center gap-1.5 text-xs whitespace-nowrap">
                         <i class="fa-solid fa-paper-plane"></i>
                         <span>Apply Now</span>
                     </button>
@@ -278,8 +282,21 @@
 
             <button onclick="toggleMobileMenu(); showProgramPeoPoModal()" class="block w-full text-left py-2 text-gold-300 font-bold border-b border-navy-800">Program (PEOs & POs)</button>
             <button onclick="toggleMobileMenu(); openStudentCornerModal('council')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Student Corner</button>
+            <button onclick="toggleMobileMenu(); showSection('events-section')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Events in Wilfred</button>
+            <div class="py-2 border-b border-navy-800">
+                <span class="text-gold-300 font-bold block mb-1">College Cells</span>
+                <div class="pl-3 space-y-1 text-slate-300">
+                    <button onclick="toggleMobileMenu(); openCellView('iqac')" class="block py-1">IQAC Cell</button>
+                    <button onclick="toggleMobileMenu(); openCellView('placement')" class="block py-1">Placement Cell</button>
+                    <button onclick="toggleMobileMenu(); openCellView('examination')" class="block py-1">Examination Cell</button>
+                    <button onclick="toggleMobileMenu(); openCellView('nss')" class="block py-1">NSS Cell</button>
+                    <button onclick="toggleMobileMenu(); openCellView('cultural')" class="block py-1">Cultural Committee</button>
+                    <button onclick="toggleMobileMenu(); openCellView('sports')" class="block py-1">Sports Cell</button>
+                    <button onclick="toggleMobileMenu(); openCellView('research')" class="block py-1">Research & Innovation</button>
+                </div>
+            </div>
             <button onclick="toggleMobileMenu(); showLeadershipOverview()" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Faculty & Leadership</button>
-            <button onclick="toggleMobileMenu(); showSection('notices')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Notices</button>
+            <button onclick="toggleMobileMenu(); showSection('events-section')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Notices</button>
             <button onclick="toggleMobileMenu(); openModal('disclosuresModal')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Mandatory Disclosures</button>
             <button onclick="toggleMobileMenu(); openModal('aicteModal')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">AICTE Information</button>
             <button onclick="toggleMobileMenu(); showSection('contact')" class="block w-full text-left py-2 text-slate-200 border-b border-navy-800">Contact Us</button>
@@ -402,8 +419,9 @@
                         <!-- Right Side Campus Media Box -->
                         <div class="lg:col-span-5">
                             <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-100 group">
-                                <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80" 
+                                <img src="https://github.com/user-attachments/assets/182e8da9-1a0e-4661-987d-5f5da6df8628" 
                                      alt="St Wilfreds Campus Building" 
+                                     onerror="this.src='https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80'"
                                      class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
                                 <div class="absolute bottom-4 left-4 right-4 text-white">
@@ -430,8 +448,7 @@
                         <!-- Chairman Card -->
                         <div onclick="showAboutSection('chairman')" class="bg-white rounded-2xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group">
                             <div class="h-64 bg-slate-200 relative overflow-hidden">
-                                <!-- REPLACE IMAGE LINK FOR SURESH GUPTA (CHAIRMAN) HERE -->
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" 
+                                <img src="https://github.com/user-attachments/assets/bfd2410a-0c67-43ae-951e-3287349a37f4" 
                                      alt="Suresh Gupta - Chairman" 
                                      class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent"></div>
@@ -455,8 +472,7 @@
                         <!-- Secretary Card -->
                         <div onclick="showAboutSection('secretary')" class="bg-white rounded-2xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group">
                             <div class="h-64 bg-slate-200 relative overflow-hidden">
-                                <!-- REPLACE IMAGE LINK FOR DR. KESHAV BADAYA (HONORABLE SECRETARY) HERE -->
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" 
+                                <img src="https://github.com/user-attachments/assets/58612c3b-6bab-488d-97e7-468042fc9735" 
                                      alt="Dr. Keshav Badaya - Honorable Secretary" 
                                      class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent"></div>
@@ -480,8 +496,7 @@
                         <!-- Director Card -->
                         <div onclick="showAboutSection('director')" class="bg-white rounded-2xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group">
                             <div class="h-64 bg-slate-200 relative overflow-hidden">
-                                <!-- REPLACE IMAGE LINK FOR MR. OJAS BADAYA (DIRECTOR) HERE -->
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" 
+                                <img src="https://github.com/user-attachments/assets/e9c2623f-67d1-42de-abd0-6ca1fe10f183" 
                                      alt="Mr. Ojas Badaya - Director" 
                                      class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                                 <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent"></div>
@@ -507,14 +522,14 @@
                     <div class="mt-10 bg-navy-900 rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg border border-navy-800">
                         <div class="space-y-1.5 text-center md:text-left">
                             <span class="text-[11px] font-extrabold uppercase tracking-widest text-gold-400">Academic & Administrative Team</span>
-                            <h3 class="text-xl sm:text-2xl font-extrabold font-serif">Meet Our Teaching Faculty & Non-Teaching Staff</h3>
+                            <h3 class="text-xl sm:text-2xl font-extrabold font-serif">Meet Our Principal, HODs, Teaching Faculty & Staff</h3>
                             <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
-                                Explore profiles, qualifications, and experience of our 12 dedicated Teaching Faculty members and 6 Non-Teaching Administrative Staff.
+                                Explore profiles, qualifications, and experience of our Principal, Heads of Department, 13 dedicated Teachers, and Administrative Staff.
                             </p>
                         </div>
                         <button onclick="showLeadershipOverview()" class="shrink-0 bg-gold-500 hover:bg-gold-400 text-navy-950 font-extrabold px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow transition flex items-center gap-2">
                             <i class="fa-solid fa-users"></i>
-                            <span>View All 18 Faculty & Staff</span>
+                            <span>View All 23 Faculty & Staff</span>
                         </button>
                     </div>
                 </div>
@@ -722,137 +737,188 @@
                 </div>
             </section>
 
-            <!-- 8. CAREER OPPORTUNITIES & PLACEMENT RECORD -->
-            <section class="py-16 bg-navy-900 text-white border-b border-navy-800">
+            <!-- 7B. EVENTS IN WILFRED SECTION -->
+            <section id="events-section" class="py-16 bg-slate-50 border-b border-slate-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    
-                   
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-navy-900 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs">
+                            Celebrations, Achievements & Milestones
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 font-serif mt-3">Events in Wilfred</h2>
+                        <p class="text-slate-600 mt-2 text-xs sm:text-sm">
+                            Explore memorable celebrations, community initiatives, inter-collegiate victories, and global engagements at St. Wilfred's College. Click any event to read the complete story.
+                        </p>
+                    </div>
 
-                    <!-- Recruiting Companies Slider -->
-                        <div class="text-center mb-6">
-                            <span class="text-[11px] font-extrabold uppercase tracking-widest text-gold-400">Placement Partners</span>
-                            <h3 class="text-xl sm:text-2xl font-bold font-serif text-white mt-1">Our Top Recruiting Companies</h3>
-                        </div>
-
-                        <div class="relative overflow-hidden py-3 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-16 before:bg-gradient-to-r before:from-navy-900 before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-16 after:bg-gradient-to-l after:from-navy-900 after:to-transparent after:z-10">
-                            <div class="animate-marquee gap-5">
-                                <!-- Set 1 -->
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-laptop-code"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">TCS</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">IT & Consulting</div>
-                                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                        <!-- Event 1: Garba Nights -->
+                        <div onclick="openEventModal('garba')" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="h-52 bg-slate-200 relative overflow-hidden">
+                                    <img src="https://github.com/user-attachments/assets/379f0979-babb-4d87-9dcb-37072b48aab7"
+                                         alt="Garba Nights at St. Wilfred's College"
+                                         onerror="this.src='https://placehold.co/800x500/062356/fbbf24?text=Garba+Nights'"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                                    <span class="absolute top-3 left-3 bg-gold-500 text-navy-950 text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                        Cultural Celebration
+                                    </span>
+                                    <h3 class="absolute bottom-3 left-4 right-4 text-lg font-extrabold text-white font-serif">
+                                        1. Garba Nights
+                                    </h3>
                                 </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-microchip"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Infosys</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Digital Services</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-red-50 text-red-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-building-columns"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">HDFC Bank</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Banking & Finance</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-landmark"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">ICICI Bank</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Financial Services</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-chart-pie"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Deloitte</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Audit & Advisory</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-globe"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Wipro</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Technology & Cloud</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-network-wired"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Accenture</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Strategy & Tech</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-industry"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Parag Milk Foods</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">FMCG & Operations</div>
-                                    </div>
-                                </div>
-
-                                <!-- Set 2 (Duplicate for seamless infinite loop) -->
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-laptop-code"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">TCS</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">IT & Consulting</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-microchip"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Infosys</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Digital Services</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-red-50 text-red-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-building-columns"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">HDFC Bank</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Banking & Finance</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-landmark"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">ICICI Bank</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Financial Services</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-chart-pie"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Deloitte</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Audit & Advisory</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-globe"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Wipro</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Technology & Cloud</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-network-wired"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Accenture</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">Strategy & Tech</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white text-navy-900 rounded-xl px-6 py-4 min-w-[200px] shadow-lg flex items-center gap-3.5 border border-slate-200">
-                                    <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-lg font-bold shrink-0"><i class="fa-solid fa-industry"></i></div>
-                                    <div>
-                                        <div class="font-extrabold text-sm tracking-tight">Parag Milk Foods</div>
-                                        <div class="text-[10px] font-semibold text-slate-500 uppercase">FMCG & Operations</div>
-                                    </div>
+                                <div class="p-5">
+                                    <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                                        Moving ahead, let us take a moment to celebrate the colours, culture and traditions of India through one of our most vibrant celebrations – Garba. Garba is more than just a dance; it represents our rich cultural heritage, unity and togetherness.
+                                    </p>
                                 </div>
                             </div>
+                            <div class="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-navy-900">
+                                <span>Read Complete Note</span>
+                                <span class="text-gold-600 group-hover:translate-x-1 transition-transform">View Event →</span>
+                            </div>
                         </div>
+
+                        <!-- Event 2: NSS Blood Donation -->
+                        <div onclick="openEventModal('nss-blood')" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="h-52 bg-slate-200 relative overflow-hidden">
+                                    <img src="https://github.com/user-attachments/assets/b28a32bc-5e9a-4937-a929-0db12626eb75"
+                                         alt="NSS Blood Donation & Community Service"
+                                         onerror="this.src='https://placehold.co/800x500/062356/fbbf24?text=NSS+Blood+Donation'"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                                    <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                        Social Responsibility
+                                    </span>
+                                    <h3 class="absolute bottom-3 left-4 right-4 text-lg font-extrabold text-white font-serif">
+                                        2. NSS Blood Donation
+                                    </h3>
+                                </div>
+                                <div class="p-5">
+                                    <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                                        NSS plays a significant role in developing social responsibility, discipline and leadership qualities among students. Through this initiative, our students actively participate in community service activities and contribute towards creating a better society.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-navy-900">
+                                <span>Read Complete Note</span>
+                                <span class="text-gold-600 group-hover:translate-x-1 transition-transform">View Event →</span>
+                            </div>
+                        </div>
+
+                        <!-- Event 3: Prosphera Event -->
+                        <div onclick="openEventModal('prosphera')" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="h-52 bg-slate-200 relative overflow-hidden">
+                                    <img src="https://github.com/user-attachments/assets/ba21170f-311c-4a50-affa-04f6f1b622c7"
+                                         alt="Prosphera Event - Best College Trophy"
+                                         onerror="this.src='https://placehold.co/800x500/062356/fbbf24?text=Prosphera+Event'"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                                    <span class="absolute top-3 left-3 bg-amber-400 text-navy-950 text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                        🏆 Best College Winner
+                                    </span>
+                                    <h3 class="absolute bottom-3 left-4 right-4 text-lg font-extrabold text-white font-serif">
+                                        3. Prosphera Event
+                                    </h3>
+                                </div>
+                                <div class="p-5">
+                                    <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                                        Our students participated with great enthusiasm, dedication and confidence, making the event a memorable experience. And the most exciting part is that St. Wilfred’s College proudly secured the title of BEST COLLEGE!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-navy-900">
+                                <span>Read Complete Note</span>
+                                <span class="text-gold-600 group-hover:translate-x-1 transition-transform">View Event →</span>
+                            </div>
+                        </div>
+
+                        <!-- Event 4: Youth Festival -->
+                        <div onclick="openEventModal('youth-festival')" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="h-52 bg-slate-200 relative overflow-hidden">
+                                    <img src="https://github.com/user-attachments/assets/5ca6592c-01e5-48f2-af84-3bcd83325ab3"
+                                         alt="Youth Festival at St. Wilfred's College"
+                                         onerror="this.src='https://placehold.co/800x500/062356/fbbf24?text=Youth+Festival'"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                                    <span class="absolute top-3 left-3 bg-sky-500 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                        Talent & Creativity
+                                    </span>
+                                    <h3 class="absolute bottom-3 left-4 right-4 text-lg font-extrabold text-white font-serif">
+                                        4. Youth Festival
+                                    </h3>
+                                </div>
+                                <div class="p-5">
+                                    <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                                        At St. Wilfred’s College, the Youth Festival brought together students from different backgrounds to showcase their talents, creativity and passion through various cultural and artistic activities.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-navy-900">
+                                <span>Read Complete Note</span>
+                                <span class="text-gold-600 group-hover:translate-x-1 transition-transform">View Event →</span>
+                            </div>
+                        </div>
+
+                        <!-- Event 5: Teacher's Day -->
+                        <div onclick="openEventModal('teachers-day')" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="h-52 bg-slate-200 relative overflow-hidden">
+                                    <img src="https://github.com/user-attachments/assets/6041f4aa-331f-4f01-8f76-38882359575c"
+                                         alt="Teachers' Day Celebration"
+                                         onerror="this.src='https://placehold.co/800x500/062356/fbbf24?text=Teachers+Day'"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                                    <span class="absolute top-3 left-3 bg-rose-500 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                        Faculty & Student Bond
+                                    </span>
+                                    <h3 class="absolute bottom-3 left-4 right-4 text-lg font-extrabold text-white font-serif">
+                                        5. Teacher's Day
+                                    </h3>
+                                </div>
+                                <div class="p-5">
+                                    <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                                        At St. Wilfred’s College, we celebrated this special occasion with great enthusiasm, joy and togetherness. The event provided our students with an opportunity to express their appreciation and respect for their teachers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-navy-900">
+                                <span>Read Complete Note</span>
+                                <span class="text-gold-600 group-hover:translate-x-1 transition-transform">View Event →</span>
+                            </div>
+                        </div>
+
+                        <!-- Event 6: International Relations -->
+                        <div onclick="openEventModal('international-relations')" class="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between group">
+                            <div>
+                                <div class="h-52 bg-slate-200 relative overflow-hidden">
+                                    <img src="https://github.com/user-attachments/assets/0a0833a6-dd94-4025-b670-dd7a01fe7db3"
+                                         alt="International Relations & Global Exposure"
+                                         onerror="this.src='https://placehold.co/800x500/062356/fbbf24?text=International+Relations'"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                                    <span class="absolute top-3 left-3 bg-indigo-600 text-white text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                                        Global Perspective
+                                    </span>
+                                    <h3 class="absolute bottom-3 left-4 right-4 text-lg font-extrabold text-white font-serif">
+                                        6. International Relations
+                                    </h3>
+                                </div>
+                                <div class="p-5">
+                                    <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">
+                                        At St. Wilfred's College, our International Relations initiatives connect students with global academic perspectives, cross-cultural dialogue, and international guest interactions to prepare them as confident global citizens.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="px-5 pb-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-navy-900">
+                                <span>Read Complete Note</span>
+                                <span class="text-gold-600 group-hover:translate-x-1 transition-transform">View Event →</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -886,6 +952,83 @@
                         <div class="bg-navy-950/80 p-6 rounded-2xl border border-navy-800 shadow-xl">
                             <div class="text-4xl sm:text-5xl font-extrabold text-amber-300">12 LPA</div>
                             <div class="text-xs sm:text-sm font-semibold text-slate-300 mt-2 uppercase tracking-wide">Highest Package</div>
+                        </div>
+                    </div>
+
+                    <!-- Top Recruiting Companies Slider -->
+                    <div class="mt-12 pt-10 border-t border-navy-800">
+                        <p class="text-center text-xs font-extrabold uppercase tracking-widest text-gold-400 mb-6">
+                            Our Prominent Recruiting Partners
+                        </p>
+                        <div class="overflow-hidden relative py-2">
+                            <div class="animate-marquee flex items-center gap-5">
+                                <!-- Set 1 -->
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-building text-gold-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">TCS</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-laptop-code text-sky-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Infosys</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-landmark text-emerald-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">HDFC Bank</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-chart-pie text-amber-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Deloitte</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-building-columns text-rose-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">ICICI Bank</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-microchip text-indigo-300 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Wipro</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-globe text-cyan-300 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Accenture</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-industry text-gold-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Parag Milk Foods</span>
+                                </div>
+                                <!-- Set 2 (Seamless Loop) -->
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-building text-gold-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">TCS</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-laptop-code text-sky-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Infosys</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-landmark text-emerald-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">HDFC Bank</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-chart-pie text-amber-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Deloitte</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-building-columns text-rose-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">ICICI Bank</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-microchip text-indigo-300 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Wipro</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-globe text-cyan-300 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Accenture</span>
+                                </div>
+                                <div class="bg-white/10 border border-white/15 backdrop-blur-xs px-6 py-3.5 rounded-xl flex items-center gap-3 min-w-[200px] justify-center">
+                                    <i class="fa-solid fa-industry text-gold-400 text-lg"></i>
+                                    <span class="font-extrabold text-sm tracking-wide text-white">Parag Milk Foods</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -947,6 +1090,39 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- 9B. ROTATING STUDENT TESTIMONIALS SECTION -->
+            <section id="student-testimonials" class="py-16 bg-slate-100 border-b border-slate-200" onmouseenter="pauseTestimonialRotation()" onmouseleave="resumeTestimonialRotation()">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+                        <div>
+                            <span class="text-xs font-extrabold uppercase tracking-widest text-navy-900 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs">
+                                Student Voices
+                            </span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 font-serif mt-3">What Our Students Say</h2>
+                            <p class="text-slate-600 mt-1.5 text-xs sm:text-sm max-w-2xl">
+                                Hear directly from our students across Arts, Commerce, Science, Management, and IT about their learning journey at St. Wilfred's ACS College.
+                            </p>
+                        </div>
+
+                        <!-- Carousel Navigation Controls -->
+                        <div class="flex items-center gap-2.5 self-start md:self-end">
+                            <button onclick="prevTestimonial()" aria-label="Previous Testimonial" class="w-10 h-10 rounded-full bg-white border border-slate-300 text-navy-900 hover:bg-navy-900 hover:text-white transition flex items-center justify-center shadow-xs">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="nextTestimonial()" aria-label="Next Testimonial" class="w-10 h-10 rounded-full bg-white border border-slate-300 text-navy-900 hover:bg-navy-900 hover:text-white transition flex items-center justify-center shadow-xs">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Rotating Testimonial Cards Grid (Shows 3 at a time on desktop, cycles through all 6) -->
+                    <div id="testimonials-carousel-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500"></div>
+
+                    <!-- Pagination Dots -->
+                    <div id="testimonials-dots" class="mt-8 flex items-center justify-center gap-2"></div>
                 </div>
             </section>
 
@@ -1148,7 +1324,7 @@
             </div>
         </div>
 
-        <!-- ==================== VIEW 4: FACULTY & LEADERSHIP DIRECTORY (12 TEACHING + 6 NON-TEACHING) ==================== -->
+        <!-- ==================== VIEW 4: FACULTY & LEADERSHIP DIRECTORY ==================== -->
         <div id="view-faculty-directory" class="view-content hidden bg-slate-50 py-12">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <button onclick="switchView('home')" class="mb-6 inline-flex items-center gap-2 text-navy-900 font-bold text-xs bg-white px-4 py-2 rounded-lg border border-slate-200 hover:bg-slate-100 transition shadow-xs">
@@ -1173,7 +1349,7 @@
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div onclick="showAboutSection('chairman')" class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition cursor-pointer flex items-center gap-4">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80" alt="Suresh Gupta" class="w-16 h-16 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
+                            <img src="https://github.com/user-attachments/assets/bfd2410a-0c67-43ae-951e-3287349a37f4" alt="Suresh Gupta" class="w-16 h-16 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
                             <div>
                                 <h4 class="font-extrabold text-navy-900 text-base">Suresh Gupta</h4>
                                 <p class="text-xs font-bold text-gold-600 uppercase">Chairman</p>
@@ -1181,7 +1357,7 @@
                             </div>
                         </div>
                         <div onclick="showAboutSection('secretary')" class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition cursor-pointer flex items-center gap-4">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Dr. Keshav Badaya" class="w-16 h-16 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
+                            <img src="https://github.com/user-attachments/assets/58612c3b-6bab-488d-97e7-468042fc9735" alt="Dr. Keshav Badaya" class="w-16 h-16 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
                             <div>
                                 <h4 class="font-extrabold text-navy-900 text-base">Dr. Keshav Badaya</h4>
                                 <p class="text-xs font-bold text-gold-600 uppercase">Honorable Secretary</p>
@@ -1189,7 +1365,7 @@
                             </div>
                         </div>
                         <div onclick="showAboutSection('director')" class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition cursor-pointer flex items-center gap-4">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Mr. Ojas Badaya" class="w-16 h-16 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
+                            <img src="https://github.com/user-attachments/assets/e9c2623f-67d1-42de-abd0-6ca1fe10f183" alt="Mr. Ojas Badaya" class="w-16 h-16 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
                             <div>
                                 <h4 class="font-extrabold text-navy-900 text-base">Mr. Ojas Badaya</h4>
                                 <p class="text-xs font-bold text-gold-600 uppercase">Director</p>
@@ -1203,23 +1379,23 @@
                 <div class="flex flex-wrap items-center justify-between gap-4 mb-6 border-b border-slate-200 pb-4">
                     <div class="flex flex-wrap gap-2">
                         <button onclick="filterFacultyCards('all')" id="tab-faculty-all" class="faculty-filter-btn bg-navy-900 text-white px-4 py-2 rounded-lg text-xs font-bold transition shadow-xs">
-                            All Members (18)
+                            All Members (23)
                         </button>
                         <button onclick="filterFacultyCards('teaching')" id="tab-faculty-teaching" class="faculty-filter-btn bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 px-4 py-2 rounded-lg text-xs font-bold transition">
-                            Teaching Faculty (12)
+                            Principal, HODs & Teachers (17)
                         </button>
                         <button onclick="filterFacultyCards('non-teaching')" id="tab-faculty-non-teaching" class="faculty-filter-btn bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 px-4 py-2 rounded-lg text-xs font-bold transition">
                             Non-Teaching Staff (6)
                         </button>
                     </div>
-                    <span class="text-xs font-semibold text-slate-500">Showing <strong id="faculty-visible-count" class="text-navy-900">18</strong> Profiles</span>
+                    <span class="text-xs font-semibold text-slate-500">Showing <strong id="faculty-visible-count" class="text-navy-900">23</strong> Profiles</span>
                 </div>
 
                 <!-- Teaching Faculty Section -->
                 <div id="section-teaching-faculty" class="mb-12">
                     <h3 class="text-xl font-extrabold text-navy-900 font-serif mb-5 flex items-center gap-2">
                         <span class="w-8 h-8 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-sm"><i class="fa-solid fa-chalkboard-user"></i></span>
-                        Teaching Faculty (12 Members)
+                        Principal, Heads of Department & Teaching Faculty (17 Members)
                     </h3>
                     <div id="teaching-faculty-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
                 </div>
@@ -1241,8 +1417,13 @@
     <footer class="bg-navy-950 text-slate-300 text-xs border-t border-navy-800 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-navy-900">
-                <div class="md:col-span-5 space-y-3">
-                    <h3 class="text-lg font-bold font-serif text-white">St. Wilfred's ACS College, Mira Road</h3>
+                <div class="md:col-span-4 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <img src="https://github.com/user-attachments/assets/0e9b3715-628e-43ab-9189-657c019f2e47" 
+                             alt="St. Wilfred's College Logo" 
+                             class="w-11 h-11 rounded-full bg-white p-0.5 object-contain border border-gold-400 shrink-0">
+                        <h3 class="text-lg font-bold font-serif text-white leading-snug">St. Wilfred's ACS College, Mira Road</h3>
+                    </div>
                     <p class="text-slate-400 text-xs leading-relaxed">
                         Premier institution in Mumbai dedicated to excellence in Arts, Commerce, Science, and Information Technology education.
                     </p>
@@ -1250,7 +1431,7 @@
                         📍Location – Near MBMC garden, Sanghavi Nagar, Mira Bhayandar Road, Mira Road (E), Thane – 401107
                     </p>
                 </div>
-                <div class="md:col-span-3 space-y-2">
+                <div class="md:col-span-2 space-y-2">
                     <h4 class="font-bold text-white uppercase tracking-wider text-xs">Quick Links</h4>
                     <ul class="space-y-1.5 text-slate-400">
                         <li><button onclick="switchView('home')" class="hover:text-gold-400">Home</button></li>
@@ -1260,12 +1441,30 @@
                         <li><button onclick="openModal('aicteModal')" class="hover:text-gold-400">AICTE Information</button></li>
                     </ul>
                 </div>
-                <div class="md:col-span-4 space-y-2">
+                <div class="md:col-span-3 space-y-2">
                     <h4 class="font-bold text-white uppercase tracking-wider text-xs">Direct Helpdesks</h4>
                     <p class="text-slate-400">Helpline: <a href="tel:+917400165509" class="text-white font-bold hover:text-gold-400">+91 7400165509</a></p>
                     <p class="text-slate-400">Query Call: <a href="tel:7565903155" class="text-white font-bold hover:text-gold-400">7565903155</a></p>
                     <p class="text-slate-400">College Email: <a href="mailto:stwcacs.miraroad@gmail.com" class="text-white font-bold hover:text-gold-400">stwcacs.miraroad@gmail.com</a></p>
                     <p class="text-slate-400">Marketing Email: <a href="mailto:marketing@stwilfredscollege.com" class="text-white font-bold hover:text-gold-400">marketing@stwilfredscollege.com</a></p>
+                </div>
+                <!-- Embedded Campus Location Map -->
+                <div class="md:col-span-3 space-y-2">
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs flex items-center justify-between">
+                        <span>Campus Location Map</span>
+                        <a href="https://maps.google.com/?q=St.+Wilfred's+College+of+Arts,+Commerce+%26+Science,+Mira+Road,+Thane+401107" target="_blank" rel="noopener noreferrer" class="text-[10px] text-gold-400 hover:underline font-semibold">
+                            Open Maps ↗
+                        </a>
+                    </h4>
+                    <div class="rounded-xl overflow-hidden border border-navy-800 shadow-lg bg-navy-900 h-40">
+                        <iframe 
+                            title="St. Wilfred's College Mira Road Location"
+                            src="https://maps.google.com/maps?q=St.%20Wilfred's%20College%20of%20Arts,%20Commerce%20%26%20Science,%20Mira%20Road%20East,%20Thane%20401107&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            class="w-full h-full border-0"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
 
@@ -1290,7 +1489,7 @@
     <!-- ==================== MODALS ==================== -->
 
     <!-- Modal: Bachelor of Arts (B.A.) Course Popup -->
-    <div id="baCourseModal" onclick="if(event.target === this) closeModal('baCourseModal')" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
+    <div id="baCourseModal" onclick="if(event.target === this) closeModal('baCourseModal')" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-5xl w-full shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
             
             <!-- Modal Header -->
@@ -1538,7 +1737,7 @@
     </div>
 
     <!-- Modal: Bachelor of Commerce (B.Com) Course Popup -->
-    <div id="bcomCourseModal" onclick="if(event.target === this) closeModal('bcomCourseModal')" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
+    <div id="bcomCourseModal" onclick="if(event.target === this) closeModal('bcomCourseModal')" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-5xl w-full shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
             
             <!-- Modal Header -->
@@ -1781,7 +1980,7 @@
     </div>
 
     <!-- Modal: Campus Life Full Image & Description Popup -->
-    <div id="campusGalleryModal" onclick="if(event.target === this) closeModal('campusGalleryModal')" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-xs hidden">
+    <div id="campusGalleryModal" onclick="if(event.target === this) closeModal('campusGalleryModal')" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-4xl w-full shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
             <!-- Close Button -->
             <button onclick="closeModal('campusGalleryModal')" aria-label="Close modal" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-navy-950/80 hover:bg-navy-900 text-white flex items-center justify-center text-xl font-bold shadow-lg transition">
@@ -1790,21 +1989,23 @@
 
             <!-- Scrollable Content -->
             <div class="overflow-y-auto">
-                <!-- Full Image Container -->
-                <div class="relative bg-slate-900 max-h-[440px] overflow-hidden flex items-center justify-center">
-                    <img id="cg-image" src="" alt="Campus Life Facility" class="w-full max-h-[440px] object-cover">
-                    <div class="absolute bottom-3 left-4">
-                        <span id="cg-badge" class="bg-gold-500 text-navy-950 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                <div class="relative bg-slate-900 max-h-[420px] overflow-hidden flex items-center justify-center">
+                    <img id="cg-image" src="" alt="Campus Life at St. Wilfred's" class="w-full max-h-[420px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-6 right-6">
+                        <span id="cg-badge" class="bg-gold-500 text-navy-950 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow inline-block mb-2">
                             Campus Life
                         </span>
+                        <h3 id="cg-title" class="text-2xl sm:text-3xl font-extrabold text-white font-serif">Campus Facility</h3>
                     </div>
                 </div>
 
-                <!-- Complete Description Body -->
-                <div class="p-6 sm:p-8 space-y-4">
-                    <h3 id="cg-title" class="text-2xl sm:text-3xl font-extrabold text-navy-900 font-serif">Title</h3>
-                    <p id="cg-description" class="text-slate-600 text-xs sm:text-sm leading-relaxed"></p>
-                    <div id="cg-highlights" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2"></div>
+                <div class="p-6 sm:p-8 space-y-5">
+                    <p id="cg-description" class="text-slate-700 text-xs sm:text-sm leading-relaxed"></p>
+                    <div>
+                        <h4 class="text-xs font-extrabold uppercase tracking-wider text-navy-900 mb-3">Key Highlights</h4>
+                        <div id="cg-highlights" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+                    </div>
                 </div>
             </div>
 
@@ -1825,10 +2026,50 @@
         </div>
     </div>
 
-    <!-- Modal: Student Corner (Student Council, NSS Committee, Aavishkar Research Club) -->
-    <div id="studentCornerModal" onclick="if(event.target === this) closeModal('studentCornerModal')" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
+    <!-- Modal: Events in Wilfred Detail Popup -->
+    <div id="eventDetailModal" onclick="if(event.target === this) closeModal('eventDetailModal')" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-xs hidden">
+        <div class="bg-white rounded-2xl max-w-4xl w-full shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
+            <!-- Close Button -->
+            <button onclick="closeModal('eventDetailModal')" aria-label="Close modal" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-navy-950/80 hover:bg-navy-900 text-white flex items-center justify-center text-xl font-bold shadow-lg transition">
+                &times;
+            </button>
+
+            <!-- Scrollable Content -->
+            <div class="overflow-y-auto">
+                <div class="relative bg-slate-900 max-h-[420px] overflow-hidden flex items-center justify-center">
+                    <img id="ev-image" src="" alt="Event at St. Wilfred's College" class="w-full max-h-[420px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-6 right-6">
+                        <span id="ev-badge" class="bg-gold-500 text-navy-950 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow inline-block mb-2">
+                            Events in Wilfred
+                        </span>
+                        <h3 id="ev-title" class="text-2xl sm:text-3xl font-extrabold text-white font-serif">Event Title</h3>
+                    </div>
+                </div>
+
+                <div id="ev-paragraphs" class="p-6 sm:p-8 space-y-3.5 text-slate-700 text-xs sm:text-sm leading-relaxed"></div>
+            </div>
+
+            <!-- Footer Controls -->
+            <div class="bg-slate-100 border-t border-slate-200 px-6 py-3.5 flex items-center justify-between gap-3 shrink-0">
+                <div class="flex items-center gap-2">
+                    <button onclick="navigateEventModal(-1)" class="px-3.5 py-2 rounded-lg bg-white border border-slate-300 text-navy-900 font-bold text-xs hover:bg-slate-50 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-chevron-left text-[10px]"></i> Previous Event
+                    </button>
+                    <button onclick="navigateEventModal(1)" class="px-3.5 py-2 rounded-lg bg-white border border-slate-300 text-navy-900 font-bold text-xs hover:bg-slate-50 transition flex items-center gap-1.5">
+                        Next Event <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+                <button onclick="closeModal('eventDetailModal')" class="px-5 py-2 rounded-lg bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs transition">
+                    Close Event
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Student Corner Popup (3 Clubs: Student Committee, NSS Committee, Aavishkar Club) -->
+    <div id="studentCornerModal" onclick="if(event.target === this) closeModal('studentCornerModal')" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-5xl w-full shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
-            
             <!-- Modal Header -->
             <div class="bg-navy-900 text-white p-6 sm:p-8 relative shrink-0 border-b-4 border-gold-500">
                 <button onclick="closeModal('studentCornerModal')" aria-label="Close modal" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl font-bold transition">
@@ -1845,13 +2086,13 @@
                 <!-- Student Body Switcher Tabs -->
                 <div class="mt-6 flex flex-wrap gap-2.5">
                     <button onclick="switchStudentCornerTab('council')" id="sc-tab-council" class="sc-tab-btn px-4 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition flex items-center gap-2 bg-gold-500 text-navy-950 shadow">
-                        <i class="fa-solid fa-crown"></i> 1. Student Council
+                        <i class="fa-solid fa-crown"></i> 1. Student Committee
                     </button>
                     <button onclick="switchStudentCornerTab('nss')" id="sc-tab-nss" class="sc-tab-btn px-4 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition flex items-center gap-2 bg-white/10 text-white hover:bg-white/20">
                         <i class="fa-solid fa-hand-holding-heart"></i> 2. NSS Committee
                     </button>
                     <button onclick="switchStudentCornerTab('aavishkar')" id="sc-tab-aavishkar" class="sc-tab-btn px-4 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition flex items-center gap-2 bg-white/10 text-white hover:bg-white/20">
-                        <i class="fa-solid fa-flask-vial"></i> 3. Aavishkar Research Club
+                        <i class="fa-solid fa-flask-vial"></i> 3. Aavishkar Club
                     </button>
                 </div>
             </div>
@@ -1871,8 +2112,45 @@
         </div>
     </div>
 
+    <!-- Modal: College Cell Display Popup -->
+    <div id="cellDetailModal" onclick="if(event.target === this) closeModal('cellDetailModal')" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-xs hidden">
+        <div class="bg-white rounded-2xl max-w-4xl w-full shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
+            
+            <!-- Modal Header -->
+            <div class="bg-navy-900 text-white p-6 sm:p-8 relative shrink-0 border-b-4 border-gold-500">
+                <button onclick="closeModal('cellDetailModal')" aria-label="Close modal" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl font-bold transition">
+                    &times;
+                </button>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-gold-400 text-xs font-extrabold uppercase tracking-wider mb-3">
+                    <i id="cell-modal-icon" class="fa-solid fa-layer-group"></i>
+                    <span id="cell-modal-badge">Institutional Cell</span>
+                </div>
+                <h3 id="cell-modal-title" class="text-2xl sm:text-3xl font-extrabold font-serif text-white">Cell Title</h3>
+                <p id="cell-modal-subtitle" class="text-slate-200 text-xs sm:text-sm mt-1.5 max-w-3xl leading-relaxed">
+                    Cell description
+                </p>
+
+                <!-- Quick Cell Switcher Pills -->
+                <div id="cell-switcher-bar" class="mt-5 flex flex-wrap gap-1.5"></div>
+            </div>
+
+            <!-- Scrollable Modal Body -->
+            <div id="cell-modal-body" class="p-6 sm:p-8 overflow-y-auto space-y-6 text-slate-700">
+                <!-- Dynamic Cell Content Injected via JS -->
+            </div>
+
+            <!-- Modal Sticky Footer -->
+            <div class="bg-slate-100 border-t border-slate-200 px-6 py-4 flex flex-wrap items-center justify-between gap-3 shrink-0">
+                <span class="text-xs text-slate-600 font-medium">St. Wilfred's College of Arts, Commerce & Science • Mira Road</span>
+                <button onclick="closeModal('cellDetailModal')" class="px-5 py-2 rounded-lg bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs transition">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal 1: Admission Inquiry -->
-    <div id="admissionModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
+    <div id="admissionModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative border-t-4 border-gold-500">
             <button onclick="closeModal('admissionModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
             <div class="text-center mb-4">
@@ -1903,7 +2181,7 @@
     </div>
 
     <!-- Modal 2: PEOs & POs -->
-    <div id="peoPoModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
+    <div id="peoPoModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative max-h-[85vh] overflow-y-auto">
             <button onclick="closeModal('peoPoModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
             <h3 class="text-xl font-bold text-navy-900 font-serif mb-2">Program Educational Objectives (PEOs) & Program Outcomes (POs)</h3>
@@ -1932,7 +2210,7 @@
     </div>
 
     <!-- Modal 3: Mandatory Disclosures -->
-    <div id="disclosuresModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
+    <div id="disclosuresModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
             <button onclick="closeModal('disclosuresModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
             <h3 class="text-xl font-bold text-navy-900 font-serif mb-2">Mandatory Disclosures</h3>
@@ -1955,7 +2233,7 @@
     </div>
 
     <!-- Modal 4: AICTE Information -->
-    <div id="aicteModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
+    <div id="aicteModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs hidden">
         <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
             <button onclick="closeModal('aicteModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
             <h3 class="text-xl font-bold text-navy-900 font-serif mb-2">AICTE Approval Details</h3>
@@ -1969,7 +2247,7 @@
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed top-5 right-5 z-50 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-[-150%] transition-transform duration-300">
+    <div id="toast" class="fixed top-5 right-5 z-[110] bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-[-150%] transition-transform duration-300">
         <i class="fa-solid fa-circle-check text-xl"></i>
         <span id="toastMsg" class="text-xs sm:text-sm font-semibold">Action completed successfully!</span>
     </div>
@@ -2139,8 +2417,7 @@
                 isLeader: true,
                 leaderName: 'Suresh Gupta',
                 leaderRole: 'Chairman',
-                /* REPLACE IMAGE LINK FOR SURESH GUPTA (CHAIRMAN) HERE */
-                portraitImg: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80',
+                portraitImg: 'https://github.com/user-attachments/assets/bfd2410a-0c67-43ae-951e-3287349a37f4',
                 content: `
                     <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
                         <p class="font-bold text-navy-900 text-lg border-b border-slate-200 pb-2">
@@ -2172,8 +2449,7 @@
                 isLeader: true,
                 leaderName: 'Dr. Keshav Badaya',
                 leaderRole: 'Honorable Secretary',
-                /* REPLACE IMAGE LINK FOR DR. KESHAV BADAYA (HONORABLE SECRETARY) HERE */
-                portraitImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+                portraitImg: 'https://github.com/user-attachments/assets/58612c3b-6bab-488d-97e7-468042fc9735',
                 content: `
                     <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
                         <p class="font-bold text-navy-900 text-lg border-b border-slate-200 pb-2">
@@ -2205,8 +2481,7 @@
                 isLeader: true,
                 leaderName: 'Mr. Ojas Badaya',
                 leaderRole: 'Director',
-                /* REPLACE IMAGE LINK FOR MR. OJAS BADAYA (DIRECTOR) HERE */
-                portraitImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+                portraitImg: 'https://github.com/user-attachments/assets/e9c2623f-67d1-42de-abd0-6ca1fe10f183',
                 content: `
                     <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
                         <p class="font-bold text-navy-900 text-lg border-b border-slate-200 pb-2">
@@ -2310,109 +2585,178 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 12 Teaching Faculty + 6 Non-Teaching Staff Directory Data
+        // Principal, HODs, Teaching Faculty & Non-Teaching Staff Directory Data
         const facultyStaffData = [
-            // 12 Teaching Faculty
+            // Principal & Heads of Department
             {
                 category: 'teaching',
-                name: 'Dr. Rajeshwar Deshmukh',
-                designation: 'Principal & Professor (Commerce)',
-                qualification: 'M.Com., M.Phil., Ph.D. (Commerce)',
-                experience: '22 Years',
-                photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80'
+                roleBadge: 'Principal',
+                name: 'Dr. Sujata Yadav',
+                designation: 'Principal',
+                qualification: 'M.Com., M.Phil., Ph.D.',
+                experience: '20+ Years',
+                photo: 'https://github.com/user-attachments/assets/6245d653-1336-4445-9064-f5f90032fa75'
             },
             {
                 category: 'teaching',
-                name: 'Dr. Sunita Kulkarni',
-                designation: 'Vice Principal & Head, Dept. of Arts',
-                qualification: 'M.A. (English), NET, Ph.D.',
-                experience: '18 Years',
-                photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'teaching',
-                name: 'Prof. Amitabh Sharma',
-                designation: 'Assistant Professor & Coordinator (BMS)',
-                qualification: 'M.Com., MBA (Finance), NET',
-                experience: '14 Years',
-                photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'teaching',
-                name: 'Dr. Priya Nair',
-                designation: 'Assistant Professor (Microbiology)',
-                qualification: 'M.Sc. (Microbiology), SET, Ph.D.',
-                experience: '12 Years',
-                photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'teaching',
-                name: 'Prof. Vikramaditya Joshi',
-                designation: 'Assistant Professor & Head (B.Sc. IT & CS)',
-                qualification: 'M.Sc. (IT), M.Tech. (CSE), NET',
-                experience: '13 Years',
-                photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'teaching',
-                name: 'Prof. Neha Verma',
-                designation: 'Assistant Professor (Data Science & Analytics)',
-                qualification: 'M.Sc. (Computer Science), M.Sc. (Data Science)',
-                experience: '9 Years',
-                photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'teaching',
-                name: 'Prof. Sandeep Patil',
-                designation: 'Assistant Professor (Accountancy & Taxation)',
-                qualification: 'M.Com., CA (Inter), SET',
-                experience: '11 Years',
-                photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'teaching',
-                name: 'Dr. Meenakshi Iyer',
-                designation: 'Assistant Professor (Chemistry)',
-                qualification: 'M.Sc. (Organic Chemistry), Ph.D.',
+                roleBadge: 'Head of Department',
+                name: 'Firoza Mirza',
+                designation: 'Head of Department',
+                qualification: 'M.Com., NET / SET',
                 experience: '15 Years',
-                photo: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=400&q=80'
+                photo: 'https://github.com/user-attachments/assets/3541cd19-f846-42af-ad20-91680a46b926'
             },
             {
                 category: 'teaching',
-                name: 'Prof. Rohan Kapoor',
-                designation: 'Assistant Professor & Coordinator (BAMMC)',
-                qualification: 'M.A. (Mass Communication & Journalism), NET',
+                roleBadge: 'Head of Department',
+                name: 'Dewang Ashar',
+                designation: 'Head of Department',
+                qualification: 'M.Sc. (IT), M.Tech.',
+                experience: '14 Years',
+                photo: 'https://github.com/user-attachments/assets/02d57aae-ea27-4546-8723-37a4517d55cc'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Head of Department',
+                name: 'Alka Jain',
+                designation: 'Head of Department',
+                qualification: 'M.A., M.Phil., NET',
+                experience: '16 Years',
+                photo: 'https://github.com/user-attachments/assets/b379f366-5c6d-4877-8b66-82d7244ae869'
+            },
+
+            // 13 Teachers
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Sonali Jha',
+                designation: 'Assistant Professor',
+                qualification: 'M.Com., B.Ed., SET',
                 experience: '10 Years',
-                photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80'
+                photo: 'https://github.com/user-attachments/assets/202c25ad-fdaa-4a79-a2da-e1037750301f'
             },
             {
                 category: 'teaching',
-                name: 'Prof. Anjali Menon',
-                designation: 'Assistant Professor (Psychology & Humanities)',
-                qualification: 'M.A. (Clinical Psychology), M.Phil.',
+                roleBadge: 'Teacher',
+                name: 'Suprit Narvankar',
+                designation: 'Assistant Professor',
+                qualification: 'M.Sc. (Computer Science), NET',
+                experience: '9 Years',
+                photo: 'https://github.com/user-attachments/assets/903324a8-ad48-41c1-97f3-add8afb06491'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Shivam Shukla',
+                designation: 'Assistant Professor',
+                qualification: 'M.Sc. (Data Science / IT)',
                 experience: '8 Years',
-                photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'
+                photo: 'https://github.com/user-attachments/assets/3bc69014-5317-4a8a-98b1-e0d72ceb2a68'
             },
             {
                 category: 'teaching',
-                name: 'Dr. Farhan Siddiqui',
-                designation: 'Assistant Professor (Zoology & Life Sciences)',
-                qualification: 'M.Sc. (Zoology), CSIR-NET, Ph.D.',
+                roleBadge: 'Teacher',
+                name: 'Simran Hussain',
+                designation: 'Assistant Professor',
+                qualification: 'M.A. (Mass Communication), NET',
+                experience: '8 Years',
+                photo: 'https://github.com/user-attachments/assets/9d474017-e3c3-41c5-b5df-efce3252259b'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Vikram Pandey',
+                designation: 'Assistant Professor',
+                qualification: 'M.Com., MBA (Finance)',
                 experience: '11 Years',
-                photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80'
+                photo: 'https://github.com/user-attachments/assets/1873d209-6150-4be8-9875-2a1266538952'
             },
             {
                 category: 'teaching',
-                name: 'Prof. Kavita Gokhale',
-                designation: 'Assistant Professor (Business Economics)',
-                qualification: 'M.A. (Economics), B.Ed., SET',
+                roleBadge: 'Teacher',
+                name: 'Vishwa Parmar',
+                designation: 'Assistant Professor',
+                qualification: 'M.Sc. (Microbiology), SET',
+                experience: '9 Years',
+                photo: 'https://github.com/user-attachments/assets/9e476538-3234-4875-8563-bf687c3cb497'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Neha Takwani',
+                designation: 'Assistant Professor',
+                qualification: 'M.Com., M.Phil., NET',
                 experience: '10 Years',
-                photo: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80'
+                photo: 'https://github.com/user-attachments/assets/75ed652f-a3a0-49a5-8f5c-06c4a305f3f7'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Apoorva Sawant',
+                designation: 'Assistant Professor',
+                qualification: 'M.Sc. (Chemistry), SET',
+                experience: '8 Years',
+                photo: 'https://github.com/user-attachments/assets/ee8c8e8d-7992-474a-ad2c-f9e92867d7d6'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Ritika Manjhiyani',
+                designation: 'Assistant Professor',
+                qualification: 'M.A. (Economics), B.Ed.',
+                experience: '7 Years',
+                photo: 'https://github.com/user-attachments/assets/ae0aacea-a726-4b72-9260-b42b92648524'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Sahil Sawant',
+                designation: 'Assistant Professor',
+                qualification: 'M.Sc. (IT), NET',
+                experience: '8 Years',
+                photo: 'https://github.com/user-attachments/assets/80c870f1-f460-4640-b731-cd9c479b785b'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Laxmi Pandey',
+                designation: 'Assistant Professor',
+                qualification: 'M.A. (English Literature), SET',
+                experience: '9 Years',
+                photo: 'https://github.com/user-attachments/assets/c85bb45f-cfa6-481e-90b9-570242d3144b'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Manoj Thakur',
+                designation: 'Assistant Professor',
+                qualification: 'M.Com., SET',
+                experience: '11 Years',
+                photo: 'https://github.com/user-attachments/assets/c64de0b7-47b7-44bc-9f48-91d779ff0f18'
+            },
+            {
+                category: 'teaching',
+                roleBadge: 'Teacher',
+                name: 'Dr. Nitin Sharma',
+                designation: 'Assistant Professor',
+                qualification: 'M.Sc., Ph.D.',
+                experience: '13 Years',
+                photo: 'https://github.com/user-attachments/assets/5e868cc9-2270-4b44-8d11-3c42cd79a3fe'
             },
 
             // 6 Non-Teaching Staff
             {
                 category: 'non-teaching',
+                roleBadge: 'Non-Teaching Staff',
+                name: 'Gaurav Maru',
+                designation: 'Senior Administrative Coordinator',
+                qualification: 'B.Com., Diploma in Office Management',
+                experience: '10 Years',
+                photo: 'https://github.com/user-attachments/assets/d7e3a994-aba1-4ec8-a7c3-510f2a6d6e57'
+            },
+            {
+                category: 'non-teaching',
+                roleBadge: 'Non-Teaching Staff',
                 name: 'Mr. Prakash Sawant',
                 designation: 'Office Superintendent & Registrar',
                 qualification: 'M.Com., Diploma in Office Administration',
@@ -2421,6 +2765,7 @@
             },
             {
                 category: 'non-teaching',
+                roleBadge: 'Non-Teaching Staff',
                 name: 'Mrs. Vandana Chavan',
                 designation: 'College Librarian',
                 qualification: 'M.Lib. & I.Sc., NET',
@@ -2429,6 +2774,7 @@
             },
             {
                 category: 'non-teaching',
+                roleBadge: 'Non-Teaching Staff',
                 name: 'Mr. Nilesh Kamble',
                 designation: 'Senior Accounts & Finance Officer',
                 qualification: 'B.Com., Tally Prime & GST Certified',
@@ -2437,6 +2783,7 @@
             },
             {
                 category: 'non-teaching',
+                roleBadge: 'Non-Teaching Staff',
                 name: 'Mr. Sameer Shaikh',
                 designation: 'IT Systems & Network Administrator',
                 qualification: 'B.Sc. (IT), CCNA Certified',
@@ -2445,19 +2792,12 @@
             },
             {
                 category: 'non-teaching',
+                roleBadge: 'Non-Teaching Staff',
                 name: 'Mrs. Snehal More',
                 designation: 'Senior Laboratory Assistant (Science Labs)',
                 qualification: 'B.Sc. (Chemistry), DMLT',
                 experience: '9 Years',
                 photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80'
-            },
-            {
-                category: 'non-teaching',
-                name: 'Mr. Mahendra Yadav',
-                designation: 'Admissions & Student Support Coordinator',
-                qualification: 'B.A., PG Diploma in Guidance & Counselling',
-                experience: '7 Years',
-                photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80'
             }
         ];
 
@@ -2466,13 +2806,13 @@
             const badgeClass = isTeaching
                 ? 'bg-navy-50 text-navy-900 border-navy-200'
                 : 'bg-amber-50 text-amber-800 border-amber-200';
-            const badgeLabel = isTeaching ? 'Teaching Faculty' : 'Non-Teaching Staff';
+            const badgeLabel = member.roleBadge || (isTeaching ? 'Teaching Faculty' : 'Non-Teaching Staff');
 
             return `
                 <div class="bg-white rounded-2xl border border-slate-200 shadow-xs hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between group">
                     <div>
-                        <div class="h-48 bg-slate-100 relative overflow-hidden">
-                            <img src="${member.photo}" alt="${member.name}" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                        <div class="h-56 bg-slate-100 relative overflow-hidden">
+                            <img src="${member.photo}" alt="${member.name}" onerror="this.src='https://placehold.co/400x400/062356/fbbf24?text=${encodeURIComponent(member.name)}'" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
                             <div class="absolute top-3 left-3">
                                 <span class="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border ${badgeClass} shadow-2xs">
                                     ${badgeLabel}
@@ -2533,11 +2873,11 @@
             if (filterType === 'all') {
                 teachingSec.classList.remove('hidden');
                 nonTeachingSec.classList.remove('hidden');
-                countEl.innerText = '18';
+                countEl.innerText = '23';
             } else if (filterType === 'teaching') {
                 teachingSec.classList.remove('hidden');
                 nonTeachingSec.classList.add('hidden');
-                countEl.innerText = '12';
+                countEl.innerText = '17';
             } else if (filterType === 'non-teaching') {
                 teachingSec.classList.add('hidden');
                 nonTeachingSec.classList.remove('hidden');
@@ -2553,9 +2893,235 @@
             }, 100);
         }
 
-        function openCellView(cellType) {
-            showToast(`Viewing ${cellType.toUpperCase()} Cell details & events`);
-            showSection('campus-life');
+        // College Cells Data & Popup Handler
+        const collegeCellsData = {
+            'iqac': {
+                label: 'IQAC Cell',
+                badge: 'Quality Assurance & Accreditation',
+                icon: 'fa-solid fa-award',
+                title: 'Internal Quality Assurance Cell (IQAC)',
+                subtitle: 'Driving continuous academic excellence, curriculum enrichment, NAAC quality benchmarks, and institutional best practices.',
+                coordinator: 'Dr. Sujata Yadav (Chairperson) & Prof. Firoza Mirza (IQAC Coordinator)',
+                email: 'iqac@stwilfredscollege.com',
+                overview: 'The Internal Quality Assurance Cell (IQAC) at St. Wilfred\'s College of Arts, Commerce & Science develops a conscious, consistent, and catalytic system to improve the academic and administrative performance of the institution in accordance with University of Mumbai and NEP 2020 standards.',
+                objectives: [
+                    'Development and application of quality benchmarks for academic and administrative activities.',
+                    'Facilitating a learner-centric environment conducive to quality education and faculty development.',
+                    'Collection and analysis of structured feedback from students, parents, alumni, and employers.',
+                    'Organization of inter- and intra-institutional workshops, seminars, and academic audits.'
+                ],
+                highlights: [
+                    { title: 'NEP 2020 Implementation', desc: 'Seamless adoption of multidisciplinary credits, skill-enhancement modules, and outcome-based education (OBE).' },
+                    { title: 'Faculty Development Programs', desc: 'Regular FDPs on modern pedagogy, digital teaching tools, and research methodology.' },
+                    { title: 'Academic & Administrative Audit', desc: 'Annual internal quality audits ensuring transparency and continuous improvement.' },
+                    { title: 'Student Mentoring System', desc: 'Structured mentor-mentee allocation for personalized academic and career guidance.' }
+                ]
+            },
+            'placement': {
+                label: 'Placement Cell',
+                badge: 'Training & Corporate Relations',
+                icon: 'fa-solid fa-briefcase',
+                title: 'Training & Placement Cell',
+                subtitle: 'Bridging the gap between campus talent and corporate recruiters through pre-placement training, internships, and campus drives.',
+                coordinator: 'Prof. Vikram Pandey (Training & Placement Officer)',
+                email: 'placements@stwilfredscollege.com',
+                overview: 'Our dedicated Training & Placement Cell works year-round with 100+ corporate partners across IT, Banking, Finance, Consulting, Media, and FMCG sectors to ensure a 90% placement rate with packages reaching up to 12 LPA.',
+                objectives: [
+                    'Organizing on-campus and pool-campus recruitment drives for graduating batches.',
+                    'Conducting aptitude training, resume-building clinics, group discussions, and mock interviews.',
+                    'Facilitating summer internships and live corporate projects across all degree programs.',
+                    'Hosting industry-academia conclaves, corporate guest lectures, and industrial visits.'
+                ],
+                highlights: [
+                    { title: '90% Placement Track Record', desc: 'Strong placement conversions across TCS, Infosys, Deloitte, HDFC Bank, ICICI Bank, and Wipro.' },
+                    { title: 'Up to 12 LPA Highest Package', desc: 'Competitive compensation packages with a 6 LPA average across corporate roles.' },
+                    { title: 'Pre-Placement Bootcamps', desc: 'Intensive soft-skills, Excel, Tally, and technical coding readiness modules.' },
+                    { title: '100+ Recruiting Partners', desc: 'Active MoUs and corporate tie-ups across Mumbai Metropolitan Region.' }
+                ]
+            },
+            'examination': {
+                label: 'Examination Cell',
+                badge: 'Assessment & Evaluation',
+                icon: 'fa-solid fa-file-signature',
+                title: 'Examination & Evaluation Cell',
+                subtitle: 'Ensuring fair, transparent, and timely conduct of internal assessments, semester examinations, and University of Mumbai results.',
+                coordinator: 'Prof. Dewang Ashar (Chief Conductor of Examinations)',
+                email: 'exams@stwilfredscollege.com',
+                overview: 'The Examination Cell manages the entire lifecycle of continuous internal evaluation (CIE) and semester-end examinations strictly in compliance with University of Mumbai ordinances and NEP 2020 credit evaluation guidelines.',
+                objectives: [
+                    'Publishing examination timetables, hall tickets, and seating arrangements well in advance.',
+                    'Ensuring strict confidentiality, smooth supervision, and fair evaluation of answer scripts.',
+                    'Timely declaration of semester results, grade cards, and convocation documentation.',
+                    'Addressing student exam queries, revaluation requests, and ATKT guidance promptly.'
+                ],
+                highlights: [
+                    { title: 'NEP Credit & Grade Tracking', desc: 'Accurate CGPA computation, ABC (Academic Bank of Credits) ID verification, and digital mark sheets.' },
+                    { title: 'Continuous Internal Evaluation', desc: 'Transparent assessment via class tests, presentations, practical journals, and projects.' },
+                    { title: 'Revaluation & Grievance Redressal', desc: 'Dedicated helpdesk for photocopy requests, revaluation, and verification of marks.' },
+                    { title: 'University Coordination', desc: 'Seamless liaison with University of Mumbai Examination House for TY degree exams.' }
+                ]
+            },
+            'nss': {
+                label: 'NSS Cell',
+                badge: 'National Service Scheme',
+                icon: 'fa-solid fa-hand-holding-heart',
+                title: 'National Service Scheme (NSS) Cell',
+                subtitle: 'Guided by the motto "Not Me But You", cultivating civic responsibility, environmental stewardship, and social leadership.',
+                coordinator: 'Prof. Sandeep Patil (NSS Programme Officer)',
+                email: 'nss@stwilfredscollege.com',
+                overview: 'The University of Mumbai affiliated NSS Unit of St. Wilfred\'s College empowers student volunteers to engage directly with local communities through health camps, cleanliness drives, literacy missions, and rural development camps.',
+                objectives: [
+                    'Understanding the community in which students work and identifying social needs.',
+                    'Developing a sense of social and civic responsibility through hands-on volunteering.',
+                    'Practicing national integration, social harmony, and disaster relief preparedness.',
+                    'Acquiring leadership qualities and democratic attitudes.'
+                ],
+                highlights: [
+                    { title: 'Mega Blood Donation Camps', desc: 'Annual blood donation and thalassemia screening drives collecting 180+ units.' },
+                    { title: '7-Day Rural Special Camp', desc: 'Residential camp focusing on water conservation, digital literacy, and rural hygiene.' },
+                    { title: 'Swachhata & Beach Clean-Up', desc: 'Coastal clean-up drives and tree plantation initiatives across Mira-Bhayandar.' },
+                    { title: 'Voter & Road Safety Drives', desc: 'Civic awareness rallies in collaboration with local municipal authorities.' }
+                ]
+            },
+            'cultural': {
+                label: 'Cultural Committee',
+                badge: 'Arts, Heritage & Youth Fest',
+                icon: 'fa-solid fa-masks-theater',
+                title: 'Cultural Committee',
+                subtitle: 'Nurturing artistic expression, stage confidence, teamwork, and cultural vibrancy across the campus.',
+                coordinator: 'Prof. Simran Hussain (Cultural Chairperson)',
+                email: 'cultural@stwilfredscollege.com',
+                overview: 'The Cultural Committee provides a vibrant platform for students to showcase their talents in music, dance, theatre, fine arts, debating, and event management at inter-collegiate and university youth festivals.',
+                objectives: [
+                    'Organizing flagship inter-collegiate youth festivals and intra-college talent competitions.',
+                    'Training and sponsoring college contingents for University of Mumbai Youth Festival.',
+                    'Celebrating national days, traditional days, and cultural diversity on campus.',
+                    'Building leadership and organizational skills through student-led event committees.'
+                ],
+                highlights: [
+                    { title: 'Megha Mindscape Youth Fest', desc: 'Flagship annual inter-collegiate festival featuring 25+ cultural, literary, and management events.' },
+                    { title: 'Tarang Cultural Day', desc: 'Celebration of Indian folk traditions, music, street plays (Nukkad Natak), and fashion.' },
+                    { title: 'University Youth Fest Contingent', desc: 'Mentorship and rehearsals for dramatics, classical/western dance, and fine arts.' },
+                    { title: 'Literary & Debate Club', desc: 'Elocution, poetry slams, quiz competitions, and creative writing workshops.' }
+                ]
+            },
+            'sports': {
+                label: 'Sports Cell',
+                badge: 'Athletics & Physical Education',
+                icon: 'fa-solid fa-trophy',
+                title: 'Sports & Athletics Cell',
+                subtitle: 'Promoting physical fitness, sportsmanship, discipline, and competitive excellence at university and state levels.',
+                coordinator: 'Prof. Manoj Thakur (Sports Director)',
+                email: 'sports@stwilfredscollege.com',
+                overview: 'The Sports Cell encourages every student to balance academics with active sports participation through structured coaching camps, annual athletic meets, and inter-college tournaments.',
+                objectives: [
+                    'Organizing the Annual Sports Meet and Wilfred Premier League tournaments.',
+                    'Selecting and coaching college teams for University of Mumbai inter-collegiate events.',
+                    'Providing indoor and outdoor sports equipment and fitness guidance.',
+                    'Instilling teamwork, resilience, and healthy lifestyle habits.'
+                ],
+                highlights: [
+                    { title: 'Wilfred Premier League', desc: 'Inter-departmental cricket, football, and box-cricket championships.' },
+                    { title: 'Track & Field Athletics', desc: 'Sprints, relay races, long jump, and shot-put competitions at the Annual Sports Meet.' },
+                    { title: 'Indoor Sports Arena', desc: 'Regular tournaments in chess, carrom, table tennis, and badminton.' },
+                    { title: 'University Representation', desc: 'Dedicated support for athletes competing in Zonal and State tournaments.' }
+                ]
+            },
+            'research': {
+                label: 'Research & Innovation',
+                badge: 'Aavishkar & IPR Cell',
+                icon: 'fa-solid fa-microscope',
+                title: 'Research & Innovation Cell',
+                subtitle: 'Cultivating scientific temper, empirical inquiry, startup ideation, and faculty-student research publications.',
+                coordinator: 'Dr. Nitin Sharma (Research Cell Convener)',
+                email: 'research@stwilfredscollege.com',
+                overview: 'The Research & Innovation Cell mentors students and faculty in writing peer-reviewed research papers, building working prototypes for the University of Mumbai Aavishkar Research Convention, and exploring entrepreneurship.',
+                objectives: [
+                    'Preparing student research teams for University of Mumbai Aavishkar Convention.',
+                    'Conducting workshops on research methodology, data analysis, and academic writing.',
+                    'Encouraging interdisciplinary projects across Science, IT, Data Science, and Commerce.',
+                    'Supporting startup prototypes, patent awareness, and Udyog Mela innovation stalls.'
+                ],
+                highlights: [
+                    { title: 'Aavishkar Research Mentorship', desc: 'Guidance on AI crop disease detection, bio-plastics, IoT water monitoring, and economic surveys.' },
+                    { title: 'National Research Conferences', desc: 'Annual multidisciplinary seminars with ISBN/ISSN conference proceedings.' },
+                    { title: 'Innovation & Startup Incubation', desc: 'Business plan competitions and mentorship for student entrepreneurs.' },
+                    { title: 'Ethics & Plagiarism Awareness', desc: 'Training on ethical research practices, citation tools, and publication standards.' }
+                ]
+            }
+        };
+
+        function openCellView(cellKey) {
+            const key = cellKey.toLowerCase();
+            const cell = collegeCellsData[key];
+            if (!cell) return;
+
+            document.getElementById('cell-modal-icon').className = cell.icon;
+            document.getElementById('cell-modal-badge').innerText = cell.badge;
+            document.getElementById('cell-modal-title').innerText = cell.title;
+            document.getElementById('cell-modal-subtitle').innerText = cell.subtitle;
+
+            // Render quick switcher pills
+            const switcher = document.getElementById('cell-switcher-bar');
+            switcher.innerHTML = Object.keys(collegeCellsData).map(k => {
+                const isActive = k === key;
+                return `
+                    <button onclick="openCellView('${k}')" class="px-3 py-1.5 rounded-lg text-[11px] font-bold transition ${isActive ? 'bg-gold-500 text-navy-950 shadow' : 'bg-white/10 text-white hover:bg-white/20'}">
+                        ${collegeCellsData[k].label}
+                    </button>
+                `;
+            }).join('');
+
+            // Render body
+            const body = document.getElementById('cell-modal-body');
+            body.innerHTML = `
+                <div class="bg-navy-50 border border-navy-100 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-navy-800 block">Cell In-Charge / Coordinator</span>
+                        <p class="text-sm font-extrabold text-navy-900 mt-0.5">${cell.coordinator}</p>
+                    </div>
+                    <a href="mailto:${cell.email}" class="inline-flex items-center gap-2 bg-white border border-navy-200 text-navy-900 hover:bg-navy-900 hover:text-white transition px-3.5 py-2 rounded-lg text-xs font-bold shrink-0">
+                        <i class="fa-solid fa-envelope text-gold-600"></i> ${cell.email}
+                    </a>
+                </div>
+
+                <div>
+                    <h4 class="text-base sm:text-lg font-extrabold text-navy-900 font-serif mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-gold-600"></i> About the Cell
+                    </h4>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${cell.overview}</p>
+                </div>
+
+                <div>
+                    <h4 class="text-base sm:text-lg font-extrabold text-navy-900 font-serif mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-gold-600"></i> Key Objectives & Functions
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        ${cell.objectives.map(obj => `
+                            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-start gap-2.5 text-xs text-slate-700 font-medium">
+                                <i class="fa-solid fa-circle-check text-emerald-600 mt-0.5 shrink-0"></i>
+                                <span>${obj}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-base sm:text-lg font-extrabold text-navy-900 font-serif mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-star text-gold-600"></i> Key Activities & Highlights
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                        ${cell.highlights.map(item => `
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-gold-400 transition">
+                                <h5 class="font-extrabold text-navy-900 text-xs sm:text-sm mb-1">${item.title}</h5>
+                                <p class="text-xs text-slate-600 leading-relaxed">${item.desc}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            openModal('cellDetailModal');
         }
 
         // Mobile Menu Toggle
@@ -2569,9 +3135,8 @@
             const modal = document.getElementById(id);
             if (modal) {
                 modal.classList.remove('hidden');
-                if (id === 'baCourseModal' || id === 'bcomCourseModal' || id === 'campusGalleryModal' || id === 'studentCornerModal') {
-                    document.body.style.overflow = 'hidden';
-                }
+                modal.style.zIndex = '100';
+                document.body.style.overflow = 'hidden';
             }
         }
 
@@ -2579,132 +3144,234 @@
             const modal = document.getElementById(id);
             if (modal) {
                 modal.classList.add('hidden');
-                if (id === 'baCourseModal' || id === 'bcomCourseModal' || id === 'campusGalleryModal' || id === 'studentCornerModal') {
-                    document.body.style.overflow = '';
-                }
+                document.body.style.overflow = '';
             }
         }
 
-        // Student Corner Data & Popup Controls
+        // Events in Wilfred Data & Modal Controls
+        const wilfredEventKeys = ['garba', 'nss-blood', 'prosphera', 'youth-festival', 'teachers-day', 'international-relations'];
+        let currentEventIndex = 0;
+
+        const wilfredEventsData = {
+            'garba': {
+                badge: 'GARBA • Cultural Celebration',
+                title: 'Garba Nights',
+                image: 'https://github.com/user-attachments/assets/379f0979-babb-4d87-9dcb-37072b48aab7',
+                paragraphs: [
+                    'Moving ahead, let us take a moment to celebrate the colours, culture and traditions of India through one of our most vibrant celebrations – Garba.',
+                    'Garba is more than just a dance; it represents our rich cultural heritage, unity and togetherness.',
+                    'At St. Wilfred’s College, the Garba celebration brought students together in an atmosphere filled with music, energy, enthusiasm and festive spirit.',
+                    'Students got an opportunity to celebrate Indian traditions, participate in cultural activities and create unforgettable memories with their friends and faculty members.',
+                    'Such celebrations help students stay connected to our culture while encouraging confidence, participation and a sense of belonging.',
+                    'At our college, we believe that education is not only about academics but also about experiencing different cultures and celebrating together.',
+                    'Because traditions connect us to our roots, while celebrations bring us closer together!'
+                ]
+            },
+            'nss-blood': {
+                badge: 'NSS – Speech • Social Welfare',
+                title: 'NSS Blood Donation',
+                image: 'https://github.com/user-attachments/assets/b28a32bc-5e9a-4937-a929-0db12626eb75',
+                paragraphs: [
+                    'NSS plays a significant role in developing social responsibility, discipline and leadership qualities among students.',
+                    'Through this initiative, our students actively participate in community service activities and contribute towards creating a better society.',
+                    'As seen in the photograph, our NSS volunteers participated in a community awareness initiative, demonstrating their commitment towards social welfare and public service.',
+                    'Such activities help students understand the importance of giving back to society, working as a team and becoming responsible citizens.',
+                    'At St. Wilfred’s College, we believe that education is not limited to classrooms; it is also about learning humanity, responsibility and the value of serving others.',
+                    'Because the best way to find yourself is to lose yourself in the service of others.'
+                ]
+            },
+            'prosphera': {
+                badge: 'PROSPHERA • 🏆 BEST COLLEGE',
+                title: 'Prosphera Event',
+                image: 'https://github.com/user-attachments/assets/ba21170f-311c-4a50-affa-04f6f1b622c7',
+                paragraphs: [
+                    'Our students participated with great enthusiasm, dedication and confidence, making the event a memorable experience.',
+                    'And the most exciting part is that St. Wilfred’s College proudly secured the title of BEST COLLEGE!',
+                    'This achievement is not just a trophy or a recognition; it represents the hard work, determination and collective efforts of our students, faculty members and everyone who contributed to this success.',
+                    'It reflects our college\'s commitment to encouraging students to explore their potential, develop new skills and achieve excellence beyond academics.',
+                    'We congratulate all the winners and participants who made this achievement possible.',
+                    'Because success is never achieved alone; it is built through teamwork, dedication and the courage to perform!',
+                    'This is truly a proud moment for the entire St. Wilfred’s family.'
+                ]
+            },
+            'youth-festival': {
+                badge: 'YOUTH FESTIVAL • Talent & Expression',
+                title: 'Youth Festival',
+                image: 'https://github.com/user-attachments/assets/5ca6592c-01e5-48f2-af84-3bcd83325ab3',
+                paragraphs: [
+                    'At St. Wilfred’s College, the Youth Festival brought together students from different backgrounds to showcase their talents, creativity and passion through various cultural and artistic activities.',
+                    'The event was filled with enthusiasm, excitement and unforgettable moments, giving students an opportunity to express themselves, discover their abilities and step beyond their comfort zones.',
+                    'Such events play an important role in the overall development of students by encouraging teamwork, leadership, confidence and healthy competition.',
+                    'We believe that every student has a unique talent, and platforms like these help bring that talent into the spotlight.',
+                    'Because college life is not just about earning degrees; it is also about discovering talents, creating memories and building confidence!',
+                    'It was truly a celebration of youth, energy and endless possibilities.'
+                ]
+            },
+            'teachers-day': {
+                badge: 'Teachers’ Day – Speech • Gratitude',
+                title: 'Teacher\'s Day',
+                image: 'https://github.com/user-attachments/assets/6041f4aa-331f-4f01-8f76-38882359575c',
+                paragraphs: [
+                    'At St. Wilfred’s College, we celebrated this special occasion with great enthusiasm, joy and togetherness. The event provided our students with an opportunity to express their appreciation and respect for their teachers through various activities and celebrations.',
+                    'It was a wonderful occasion filled with smiles, memorable moments and a strong sense of bonding between students and faculty members.',
+                    'We believe that teachers play an important role not only in academic development but also in building confidence, values and character among students.',
+                    'Because a good teacher teaches, but a great teacher inspires!'
+                ]
+            },
+            'international-relations': {
+                badge: 'Global Engagement • International Relations',
+                title: 'International Relations',
+                image: 'https://github.com/user-attachments/assets/0a0833a6-dd94-4025-b670-dd7a01fe7db3',
+                paragraphs: [
+                    'At St. Wilfred’s College, our International Relations initiatives are designed to broaden students’ horizons and connect classroom learning with global perspectives.',
+                    'Through international seminars, cross-cultural dialogues, and global academic interactions, students gain deeper insight into international business, diplomacy, and worldwide career pathways.',
+                    'These engagements nurture cross-cultural understanding, global leadership, and confidence to thrive in an interconnected world.'
+                ]
+            }
+        };
+
+        function openEventModal(key) {
+            const idx = wilfredEventKeys.indexOf(key);
+            if (idx === -1) return;
+            currentEventIndex = idx;
+            renderEventModal(key);
+            openModal('eventDetailModal');
+        }
+
+        function navigateEventModal(direction) {
+            currentEventIndex = (currentEventIndex + direction + wilfredEventKeys.length) % wilfredEventKeys.length;
+            renderEventModal(wilfredEventKeys[currentEventIndex]);
+        }
+
+        function renderEventModal(key) {
+            const ev = wilfredEventsData[key];
+            if (!ev) return;
+
+            const imgEl = document.getElementById('ev-image');
+            imgEl.src = ev.image;
+            imgEl.alt = ev.title;
+            imgEl.onerror = function() {
+                this.src = 'https://placehold.co/900x450/062356/fbbf24?text=' + encodeURIComponent(ev.title);
+            };
+
+            document.getElementById('ev-badge').innerText = ev.badge;
+            document.getElementById('ev-title').innerText = ev.title;
+
+            const paraContainer = document.getElementById('ev-paragraphs');
+            paraContainer.innerHTML = ev.paragraphs.map((text, index) => {
+                const isLast = index === ev.paragraphs.length - 1;
+                if (isLast) {
+                    return `<p class="font-bold text-navy-900 bg-amber-50/80 border-l-4 border-gold-500 p-3.5 rounded-r-xl">${text}</p>`;
+                }
+                return `<p>${text}</p>`;
+            }).join('');
+        }
+
+        // Student Corner Data & Popup Controls (3 Clubs: Student Committee, NSS Committee, Aavishkar Club)
         const studentCornerData = {
             'council': {
-                title: 'Student Council',
-                subtitle: 'Elected student representatives bridging administration and the student community while spearheading flagship campus festivals.',
-                badge: 'Apex Student Body',
-                membersTitle: 'Council Members & Designations',
+                title: 'Student Committee',
+                subtitle: 'Elected student representatives bridging administration and the student community while organizing flagship cultural, management, and national events.',
+                badge: 'Apex Student Governance Body',
+                membersTitle: 'Student Committee Members & Designations',
                 members: [
-                    { name: 'Aarav Sharma', designation: 'General Secretary (President)', stream: 'TY B.Com', photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Sneha Nair', designation: 'Cultural Secretary', stream: 'TY BAMMC', photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Rohan Deshmukh', designation: 'Sports Secretary', stream: 'TY BMS', photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Priyanka Joshi', designation: 'Joint Secretary & Ladies Representative', stream: 'TY B.Sc. IT', photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Siddharth Verma', designation: 'Treasurer & Event Logistics Head', stream: 'SY B.Com', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Ananya Kulkarni', designation: 'Literary & Debate Coordinator', stream: 'SY B.A.', photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80' }
+                    { name: 'Pratik Poojary', designation: 'President', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/1ed12c39-435f-4921-98ef-cbdccafb50b2' },
+                    { name: 'Alfiya Nakhwa', designation: 'Vice President', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/edac8617-b5d6-4dfe-a27e-4d061f59ff7c' },
+                    { name: 'Heet Joshi', designation: 'General Secretary', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/194c4a24-cbb3-4213-b25e-d022008e4c09' },
+                    { name: 'Soham Kasare', designation: 'Technical Head', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/4f22604b-2993-48ef-82aa-983dcc68cb3d' },
+                    { name: 'Abbas Hussain', designation: 'Cultural Head', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/2e38a076-1581-4f24-b35a-13b9211208a3' },
+                    { name: 'Nakul Dubey', designation: 'Social Media Head', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/ddb3bcae-bbba-4df9-a126-376c3505f161' },
+                    { name: 'Zoha Khan', designation: 'Student Manager', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/1635bd39-4161-47c2-a5a1-d4fd3ee860b5' },
+                    { name: 'Rajesh Rastogi', designation: 'NSS Head', stream: 'Student Committee', photo: 'https://github.com/user-attachments/assets/44302e32-dfc1-4560-9baa-b40c3eff5b45' }
                 ],
-                activitiesTitle: 'Festivals Conducted',
+                activitiesTitle: 'Events Conducted by Student Committee',
                 activities: [
                     {
-                        name: 'Megha Mindscape — Annual Inter-Collegiate Youth Fest',
-                        tag: 'Flagship Cultural & Tech Fest',
-                        image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
-                        description: 'Our grand annual youth festival featuring 25+ events across performing arts, management quizzes, hackathons, fashion walk, and celebrity judges with 1,500+ student participants.'
+                        name: 'Garba Celebration',
+                        tag: 'Cultural Festival',
+                        image: 'https://github.com/user-attachments/assets/580905c5-0c11-4534-b775-5441bbce68ab',
+                        description: 'Vibrant celebration of Indian culture, music, and traditional Garba dance bringing students and faculty together in festive spirit and unity.'
                     },
                     {
-                        name: 'Udyog Mela & Entrepreneurship Carnival',
-                        tag: 'Commerce & Management Fest',
-                        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80',
-                        description: 'Student-run startup exhibition, business plan pitch competition, and live market stalls encouraging practical entrepreneurial skills.'
-                    },
-                    {
-                        name: 'Tarang — Traditional & Cultural Harmony Day',
-                        tag: 'Cultural Celebration',
-                        image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80',
-                        description: 'Celebrating India\'s diverse heritage through folk dances, traditional attire competitions, street plays (Nukkad Natak), and musical performances.'
-                    },
-                    {
-                        name: 'Wilfred Premier League & Annual Sports Meet',
-                        tag: 'Inter-Departmental Sports Fest',
-                        image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80',
-                        description: 'Week-long athletic and indoor-outdoor sports championship including cricket, football, badminton, chess, and track events.'
+                        name: 'Independence Day Celebration',
+                        tag: 'National Celebration',
+                        image: 'https://github.com/user-attachments/assets/782fde94-b775-4437-a800-93854e80d0ca',
+                        description: 'Flag hoisting ceremony, patriotic performances, and student tributes celebrating India’s independence and spirit of national unity.'
                     }
                 ]
             },
             'nss': {
                 title: 'NSS Committee (National Service Scheme)',
-                subtitle: 'Guided by the motto "Not Me But You", the NSS unit instills social responsibility, civic awareness, and community service.',
+                subtitle: 'Guided by the motto "Not Me But You", the NSS Committee instills social responsibility, discipline, and community service.',
                 badge: 'University of Mumbai NSS Unit',
-                membersTitle: 'NSS Committee Members',
+                membersTitle: 'NSS Committee Members & Designations',
                 members: [
-                    { name: 'Prof. Sandeep Patil', designation: 'NSS Programme Officer', stream: 'Faculty Coordinator', photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Omkar Sawant', designation: 'NSS Student Leader (Male)', stream: 'TY B.Com', photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Rutuja Shinde', designation: 'NSS Student Leader (Female)', stream: 'TY B.A.', photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Karan Mehta', designation: 'Camp & Field Coordinator', stream: 'SY B.Sc. CS', photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Pooja Yadav', designation: 'Documentation & Media Head', stream: 'SY BAMMC', photo: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=300&q=80' },
-                    { name: 'Nikhil Kadam', designation: 'Community Outreach Volunteer Head', stream: 'SY BMS', photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80' }
+                    { name: 'Rajesh Rastogi', designation: 'NSS Head', stream: 'NSS Unit', photo: 'https://github.com/user-attachments/assets/ddf8a04d-ca55-44e2-b8bd-78fdfa57f070' }
                 ],
-                activitiesTitle: 'Initiatives Undertaken',
+                activitiesTitle: 'Events & Social Initiatives Conducted by NSS',
                 activities: [
                     {
-                        name: 'Mega Blood Donation & Thalassemia Check-up Camp',
-                        tag: 'Healthcare Initiative',
-                        image: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=800&q=80',
-                        description: 'Organized in collaboration with municipal blood banks, collecting 180+ units of blood and providing free thalassemia screening for students and local residents.'
+                        name: 'Blood Donation Camp at Mira Road Station',
+                        tag: 'Healthcare & Public Service',
+                        image: 'https://github.com/user-attachments/assets/d128a6e9-a24c-46d5-828c-07be6ffe4ace',
+                        description: 'Community blood donation drive organized by St. Wilfred’s NSS volunteers at Mira Road Station to support local blood banks and save lives.'
                     },
                     {
-                        name: 'Swachhata Hi Seva & Mira-Bhayandar Beach Clean-Up Drive',
-                        tag: 'Environmental Conservation',
-                        image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80',
-                        description: 'Regular coastal clean-up drives, plastic-free campus awareness rallies, and tree plantation campaigns across Mira Road.'
+                        name: 'Nasha Mukti Abhiyan (Stop Drugs Campaign)',
+                        tag: 'Social Awareness Campaign',
+                        image: 'https://github.com/user-attachments/assets/06122bcb-911a-4163-a6d7-9f6ce63da114',
+                        description: 'Anti-drug awareness rally and youth sensitization campaign advocating a healthy, addiction-free society.'
                     },
                     {
-                        name: '7-Day Rural Residential Special Camp',
-                        tag: 'Rural Development',
-                        image: 'https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80',
-                        description: 'Immersion camp in adopted villages focusing on water conservation (bandhara building), digital literacy workshops, and street plays on hygiene and education.'
+                        name: 'National Yoga Day',
+                        tag: 'Health & Wellness Initiative',
+                        image: 'https://github.com/user-attachments/assets/694ca257-5984-4643-9a76-01b0b40bc3e5',
+                        description: 'Mass yoga and mindfulness session conducted for students and staff promoting physical fitness, mental clarity, and holistic well-being.'
                     },
                     {
-                        name: 'Voter Awareness & Road Safety Campaign',
-                        tag: 'Civic Responsibility',
-                        image: 'https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?auto=format&fit=crop&w=800&q=80',
-                        description: 'Interactive awareness sessions with traffic police and electoral officers promoting first-time voter registration and helmet/road safety.'
+                        name: 'NSS Special Camp',
+                        tag: 'Community Development Camp',
+                        image: 'https://github.com/user-attachments/assets/0fb74d33-d287-4fb8-a370-73624f5a64b8',
+                        description: 'Residential community service camp focused on rural outreach, cleanliness drives, environmental conservation, and social welfare initiatives.'
                     }
                 ]
             },
             'aavishkar': {
-                title: 'Aavishkar Research Club',
+                title: 'Aavishkar Club (Research & Innovation)',
                 subtitle: 'Fostering a culture of scientific inquiry, innovation, and inter-collegiate research paper presentations for the University of Mumbai Aavishkar Research Convention.',
-                badge: 'Innovation & Research Cell',
-                membersTitle: 'Aavishkar Research Club Members',
+                badge: 'Innovation & Research Club',
+                membersTitle: 'Aavishkar Club Members & Designations',
                 members: [
-                    { name: 'Dr. Priya Nair', designation: 'Faculty Research Mentor', stream: 'Dept. of Microbiology', photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80' },
+                    { name: 'Dr. Nitin Sharma', designation: 'Faculty Research Convener', stream: 'Research & Science Dept.', photo: 'https://github.com/user-attachments/assets/5e868cc9-2270-4b44-8d11-3c42cd79a3fe' },
                     { name: 'Aditya Rao', designation: 'Student Research President', stream: 'TY B.Sc. Data Science', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80' },
                     { name: 'Shruti Tiwari', designation: 'Vice President (Life Sciences)', stream: 'TY B.Sc. (MZC)', photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80' },
                     { name: 'Harshil Shah', designation: 'Technical & AI Project Lead', stream: 'TY B.Sc. IT', photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80' },
                     { name: 'Meera Iyer', designation: 'Commerce & Policy Research Lead', stream: 'TY B.Com', photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80' },
                     { name: 'Devansh Pillai', designation: 'Prototype & Documentation Coordinator', stream: 'SY B.Sc. CS', photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80' }
                 ],
-                activitiesTitle: 'Projects Worked Upon',
+                activitiesTitle: 'Student Research Projects Worked Upon',
                 activities: [
                     {
                         name: 'AI-Based Early Crop Disease Detection Using Leaf Imagery',
-                        tag: 'Data Science & Agriculture',
+                        tag: 'Data Science & Agriculture Project',
                         image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=800&q=80',
                         description: 'Deep learning convolutional neural network model developed by B.Sc. Data Science & IT students to detect fungal infections in crops via smartphone photos.'
                     },
                     {
                         name: 'Biodegradable Bio-Plastic Synthesis from Fruit Peel Waste',
-                        tag: 'Microbiology & Chemistry',
+                        tag: 'Microbiology & Chemistry Project',
                         image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
                         description: 'Eco-friendly polymer research by B.Sc. (MZC) students transforming organic citrus and banana peel waste into compostable packaging films.'
                     },
                     {
                         name: 'Digital Financial Literacy & UPI Adoption Among Street Vendors in Mira Road',
-                        tag: 'Commerce & Economics Study',
+                        tag: 'Commerce & Economics Project',
                         image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
                         description: 'Empirical survey and analytical study examining micro-credit access, digital payment security, and bookkeeping habits of local small businesses.'
                     },
                     {
                         name: 'IoT-Enabled Smart Water Quality Monitoring System for Urban Lakes',
-                        tag: 'Computer Science & Environment',
+                        tag: 'Computer Science & Environment Project',
                         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
                         description: 'Real-time sensor prototype measuring pH, turbidity, and dissolved oxygen levels with automated cloud alerts for local water bodies.'
                     }
@@ -2901,14 +3568,152 @@
             e.target.reset();
         }
 
-        // Close Course Popups on Escape Key
+        // Close Course & Gallery Popups on Escape Key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeModal('baCourseModal');
                 closeModal('bcomCourseModal');
                 closeModal('campusGalleryModal');
                 closeModal('studentCornerModal');
+                closeModal('cellDetailModal');
+                closeModal('eventDetailModal');
+                closeModal('admissionModal');
+                closeModal('peoPoModal');
+                closeModal('disclosuresModal');
+                closeModal('aicteModal');
             }
+        });
+
+        // ==================== 6 STUDENT TESTIMONIALS ROTATING CAROUSEL ====================
+        const studentTestimonialsData = [
+            {
+                name: 'Riya Deshmukh',
+                course: 'TY B.Com (Batch 2024-25)',
+                achievement: 'Placed at Deloitte India',
+                avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+                testimony: 'St. Wilfred\'s ACS College gave me strong practical exposure in taxation, Tally, and financial accounting alongside mock interviews that helped me secure my placement at Deloitte.'
+            },
+            {
+                name: 'Aryan Kulkarni',
+                course: 'TY B.Sc. Information Technology',
+                achievement: 'Full Stack Developer Intern',
+                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+                testimony: 'The high-speed IT labs, hands-on coding hackathons, and constant mentorship from our computer science professors turned my final-year project into a real-world software product.'
+            },
+            {
+                name: 'Snehal Patil',
+                course: 'TY Bachelor of Management Studies (BMS)',
+                achievement: 'Megha Mindscape Organizing Lead',
+                avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
+                testimony: 'Leading events during Megha Mindscape and participating in industrial visits like Parag Milk Foods built my confidence, leadership skills, and corporate readiness.'
+            },
+            {
+                name: 'Mohit Sharma',
+                course: 'SY B.Sc. Data Science',
+                achievement: 'Aavishkar Research Convention Finalist',
+                avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
+                testimony: 'Through the Aavishkar Research Club, I got to work on an AI crop-disease detection model with dedicated guidance from our faculty mentors.'
+            },
+            {
+                name: 'Pooja Nair',
+                course: 'TY B.A. in Multimedia & Mass Comm (BAMMC)',
+                achievement: 'Media & Content Producer',
+                avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+                testimony: 'From newsroom simulations to anchoring college cultural fests, BAMMC at St. Wilfred\'s allowed me to build a rich media portfolio before even graduating.'
+            },
+            {
+                name: 'Siddhesh Jadhav',
+                course: 'TY B.Sc. (Microbiology - Zoology - Chemistry)',
+                achievement: 'NSS Best Volunteer Awardee',
+                avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+                testimony: 'Our well-equipped science laboratories and NSS community camps shaped both my scientific research skills and my commitment to social responsibility.'
+            }
+        ];
+
+        let currentTestimonialIndex = 0;
+        let testimonialTimer = null;
+
+        function renderTestimonials() {
+            const grid = document.getElementById('testimonials-carousel-grid');
+            const dotsContainer = document.getElementById('testimonials-dots');
+            if (!grid || !dotsContainer) return;
+
+            const total = studentTestimonialsData.length;
+            const visibleItems = [
+                studentTestimonialsData[currentTestimonialIndex % total],
+                studentTestimonialsData[(currentTestimonialIndex + 1) % total],
+                studentTestimonialsData[(currentTestimonialIndex + 2) % total]
+            ];
+
+            grid.innerHTML = visibleItems.map(item => `
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1 text-gold-500 text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="w-8 h-8 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center text-sm">
+                                <i class="fa-solid fa-quote-right"></i>
+                            </span>
+                        </div>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed italic">
+                            "${item.testimony}"
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3.5">
+                        <img src="${item.avatar}" alt="${item.name}" onerror="this.src='https://placehold.co/100x100/062356/fbbf24?text=SWC'" class="w-12 h-12 rounded-full object-cover object-top border-2 border-gold-400 shrink-0">
+                        <div>
+                            <h4 class="font-extrabold text-navy-900 text-sm">${item.name}</h4>
+                            <p class="text-xs font-bold text-gold-600">${item.course}</p>
+                            <span class="inline-block mt-0.5 text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                                ${item.achievement}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            dotsContainer.innerHTML = studentTestimonialsData.map((_, idx) => `
+                <button onclick="goToTestimonial(${idx})" aria-label="Go to testimonial ${idx + 1}" class="h-2.5 rounded-full transition-all duration-300 ${idx === currentTestimonialIndex ? 'w-8 bg-navy-900' : 'w-2.5 bg-slate-300 hover:bg-slate-400'}"></button>
+            `).join('');
+        }
+
+        function nextTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % studentTestimonialsData.length;
+            renderTestimonials();
+        }
+
+        function prevTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex - 1 + studentTestimonialsData.length) % studentTestimonialsData.length;
+            renderTestimonials();
+        }
+
+        function goToTestimonial(idx) {
+            currentTestimonialIndex = idx;
+            renderTestimonials();
+        }
+
+        function startTestimonialRotation() {
+            if (testimonialTimer) clearInterval(testimonialTimer);
+            testimonialTimer = setInterval(nextTestimonial, 4500);
+        }
+
+        function pauseTestimonialRotation() {
+            if (testimonialTimer) clearInterval(testimonialTimer);
+        }
+
+        function resumeTestimonialRotation() {
+            startTestimonialRotation();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderTestimonials();
+            startTestimonialRotation();
         });
     </script>
 </body>
